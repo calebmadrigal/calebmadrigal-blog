@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
+import os.path
 
 AUTHOR = u'Caleb Madrigal'
 SITENAME = u'Caleb Madrigal'
@@ -43,8 +44,8 @@ DEFAULT_PAGINATION = False
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
 
-THEME = '/home/caleb/calebmadrigal_com/pelican-octopress-theme/'
-PLUGIN_PATH = '/home/caleb/calebmadrigal_com/pelican-plugins'
+THEME = '../pelican-octopress-theme/'
+PLUGIN_PATH = '../pelican-plugins'
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal']
