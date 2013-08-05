@@ -14,7 +14,8 @@ DEFAULT_LANG = u'en'
 
 ARTICLE_URL = '{slug}/'
 ARTICLE_SAVE_AS = '{slug}/index.html'
-DISQUS_SITENAME = "calebmadrigallabs"
+DISQUS_SITENAME = 'calebmadrigal'
+GOOGLE_ANALYTICS = 'UA-31212664-1'
 
 STATIC_OUT_DIR = ''
 STATIC_PATHS = ['images', 'code']
@@ -22,12 +23,13 @@ STATIC_PATHS = ['images', 'code']
 FILES_TO_COPY = (
     ('extra/favicon.ico', 'favicon.ico'),
     ('extra/robots.txt', 'robots.txt'))
-#FILES_TO_COPY = [('extra/favicon.ico', 'favicon.ico')]
 
-# Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+# Feed generation
+FEED_ALL_ATOM = 'feeds/all.rss.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.rss.xml'
 TRANSLATION_FEED_ATOM = None
+FEED_DOMAIN = SITEURL
+FEED_ATOM = 'atom.xml'
 
 # Blogroll
 #LINKS =  (('Pelican', 'http://getpelican.com/'),
@@ -47,9 +49,7 @@ DEFAULT_PAGINATION = False
 THEME = '../pelican-octopress-theme/'
 PLUGIN_PATH = '../pelican-plugins'
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
-           'liquid_tags.include_code', 'liquid_tags.notebook',
+           'liquid_tags.include_code', #'liquid_tags.notebook',
            'liquid_tags.literal']
 
-FEED_DOMAIN = SITEURL
-FEED_ATOM = 'atom.xml'
 SEARCH_BOX = True
