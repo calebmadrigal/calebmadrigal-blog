@@ -4,8 +4,7 @@ date: 2012-11-26 06:19:53
 layout: post
 slug: pyknon-intro-chords-intervals
 title: Pyknon Intro, Chords, and Intervals
-wordpress_id: 362
-category: music
+category: math
 tags: math, music, python
 
 I've continued on my (hopefully) short-term fascination with music+math (it's fun, but really bad for productivity).  So I found this great library for generating music in Python called [Pyknon](http://kroger.github.com/pyknon/).  And it can be installed using pip: `pip install pyknon`.
@@ -14,8 +13,6 @@ I wrote a little python script just to help me understand some concepts in music
 
 Behold:
 
-
-    
     
     from pyknon.genmidi import Midi
     from pyknon.music import NoteSeq, Note, Rest
@@ -112,26 +109,26 @@ Behold:
     midi = Midi(1, tempo=80)
     midi.seq_chords(map(NoteSeq, G_min_chords))
     midi.write("g_minor_chords.mid")
-    
-
 
 
 And here is the output (excluding the MIDI files it writes):
 
     
-    
     localhost:music caleb$ python piano_notes.py 
-    All piano notes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87]
+    All piano notes: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
+     21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43,
+     44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66,
+     67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87]
     Middle C key number: 39
     C major (staring with middle C): [39, 41, 43, 44, 46, 48, 50]
     C major: [51, 53, 55, 56, 58, 60, 62, 63]
     Intervals for C major: [2, 2, 1, 2, 2, 2, 1]
     A minor: [48, 50, 51, 53, 55, 56, 58, 60]
     Intervals A minor: [2, 1, 2, 2, 1, 2, 2]
-    C major chords: [[<c>, <e>, <g>], [<d>, <f>, <a>], [<e>, <g>, <b>], [<f>, <a>, <c>], [<g>, <b>, <d>], [<a>, <c>, <e>], [<b>, <d>, <f>], [<c>, <F#>, <A#>]]
-    G minor chords: [[<g>, <A#>, <d>], [<a>, <c>, <D#>], [<A#>, <d>, <f>], [<c>, <D#>, <g>], [<d>, <f>, <a>], [<D#>, <g>, <A#>], [<f>, <a>, <c>]]
-    
+    C major chords: [[<c>, <e>, <g>], [<d>, <f>, <a>], [<e>, <g>, <b>], [<f>, <a>, <c>],
+     [<g>, <b>, <d>], [<a>, <c>, <e>], [<b>, <d>, <f>], [<c>, <F#>, <A#>]]
 
-
+    G minor chords: [[<g>, <A#>, <d>], [<a>, <c>, <D#>], [<A#>, <d>, <f>], [<c>, <D#>, <g>],
+     [<d>, <f>, <a>], [<D#>, <g>, <A#>], [<f>, <a>, <c>]]
 
 

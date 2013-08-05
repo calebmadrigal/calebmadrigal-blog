@@ -4,14 +4,11 @@ date: 2012-04-26 20:15:23
 layout: post
 slug: linear-regression
 title: Linear Regression with Gradient Descent
-wordpress_id: 192
-category: artificial intelligence
-tags: machine learning, python
+category: ai
+tags: machine-learning, ai, python
 
 I'm taking the [Stanford Machine Learning class](http://class.coursera.org/ml/).  The first algorithm we covered is Linear Regression using [Gradient Descent](http://en.wikipedia.org/wiki/Gradient_descent).  I implemented this algorithm is Python.  Here's what it looks like:
 
-
-    
     
     import subprocess
     
@@ -53,23 +50,19 @@ I'm taking the [Stanford Machine Learning class](http://class.coursera.org/ml/).
         print line
     
         plot_data_and_line(line, data_file)
-    
-
 
 
 This code takes in a data file with a data point on each line with the x and y separated by a TAB; Example:
 
     
-    
     0.000000	95.364693
     1.000000	97.217205
     2.000000	75.195834
     3.000000	60.105519
-    
-
-
 
 This code also plots the data points and the resulting best-fit line in [gnuplot](http://en.wikipedia.org/wiki/Gnuplot).  For example:
-[![](http://www.calebmadrigal.com/wp-content/uploads/2012/04/linear_regression_example.png)](http://www.calebmadrigal.com/wp-content/uploads/2012/04/linear_regression_example.png)
+
+![Linear Regression](/static/images/linear_regression_example.png)
 
 This code, along with helper files, is on [my github repo](https://github.com/calebmadrigal/machine-learning-algorithms/tree/master/univariate_linear_regression).
+

@@ -4,7 +4,6 @@ date: 2012-01-02 20:20:05
 layout: page
 slug: about-me
 title: About Me
-wordpress_id: 6
 
 ![Me at central park](/static/images/me_at_central_park1.jpg)
 

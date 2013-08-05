@@ -4,7 +4,6 @@ date: 2012-05-10 15:54:08
 layout: page
 slug: friends
 title: Friends
-wordpress_id: 240
 
 Here are some of my friends' blogs and websites:
 

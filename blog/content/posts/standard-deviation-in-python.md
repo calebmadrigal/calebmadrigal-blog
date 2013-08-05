@@ -4,14 +4,11 @@ date: 2012-03-01 16:43:12
 layout: post
 slug: standard-deviation-in-python
 title: Standard Deviation in Python
-wordpress_id: 140
 category: python
 tags: probability, python, statistics
 
 I just wanted to go through the process of calculating standard deviation today, and this is how I did it in Python.  Python makes such a nice calculator :)
 
-
-    
     
     >>> s = [2,4,4,4,5,5,7,9]
     >>> def average(s): return sum(s) * 1.0 / len(s)
@@ -29,4 +26,4 @@ I just wanted to go through the process of calculating standard deviation today,
     >>> standard_deviation
     2.0
     >>>
-    
+

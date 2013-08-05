@@ -4,18 +4,15 @@ date: 2012-07-06 05:09:57
 layout: post
 slug: facial-detection-opencv-python
 title: Facial Detection with OpenCV and Python
-wordpress_id: 310
-category: computer vision
-tags: computer vision, opencv, python
+category: ai
+tags: python, ai, computer-vision
 
 I was able to get some basic facial detection working in OpenCV with Python.  Here's what it looks like:
 
-[![](http://www.calebmadrigal.com/wp-content/uploads/2012/07/facial_recognition.png)](http://www.calebmadrigal.com/wp-content/uploads/2012/07/facial_recognition.png)
+![Facial recognition with OpenCV](/static/images/facial_recognition.png)
 
 And here is the 34-line python script to draw boxes around all detected faces in live video:
 
-
-    
     
     import cv
     
@@ -51,4 +48,4 @@ And here is the 34-line python script to draw boxes around all detected faces in
     
             cv.ShowImage("w1", image)
             i += 1
-    
+

@@ -4,9 +4,8 @@ date: 2012-03-12 14:45:40
 layout: post
 slug: resampling-wheel-algorithm
 title: Resampling Wheel Algorithm
-wordpress_id: 175
-category: artificial intelligence
-tags: algorithms, artificial intelligence
+category: ai
+tags: algorithms, ai
 
 I've been taking the Udacity CS373 (Robotic Car) class, and this week the topic was [Particle filters](http://en.wikipedia.org/wiki/Particle_filter).  Particle filters are basically a localization algorithm that accounts for error in measurements and sensors.
 
@@ -14,8 +13,6 @@ Anyway, part of the Particle Filter algorithm requires the generation of a new s
 
 Here is the algorithm (with print statements - I used these to help me understand how the algorithm works):
 
-
-    
     
     import random
     
@@ -43,13 +40,9 @@ Here is the algorithm (with print statements - I used these to help me understan
         print "old particles =", old_particles
         print "weights =", old_particles
         print "new particles =", new_particles
-    
-
 
 
 And here is a sample run (with my debug print statements):
-
-    
     
     beta = 0.536313558942
     	beta= 0.236314, index = 0, weight = 0.300000
@@ -65,4 +58,4 @@ And here is a sample run (with my debug print statements):
     old particles = [1, 2, 3, 4]
     weights = [1, 2, 3, 4]
     new particles = [1, 3, 1, 3]
-    
+

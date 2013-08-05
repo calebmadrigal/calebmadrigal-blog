@@ -4,15 +4,13 @@ date: 2012-03-03 04:50:36
 layout: post
 slug: tail-call-optimization-in-python
 title: Tail call optimization in Python
-wordpress_id: 149
 category: python
-tags: functional programming, python
+tags: functional-programming, python
 
 Since I've been getting into functional programming more recently, the fact that Python doesn't do tail-call optimization has been bothering me.  So I did a bit of searching, and found this gem: [Tail Call Optimization Decorator](http://code.activestate.com/recipes/474088/).
 
 Here is a snippet from it:
 
-    
     
     import sys
     
@@ -52,8 +50,7 @@ Here is a snippet from it:
       if n == 0:
         return acc
       return factorial(n-1, n*acc)
-    
 
 
+So it is a decorator that you place on a tail-call recursive function.  This basically lets the function continue executing rather than throwing the `RuntimeError: maximum recursion depth exceeded` exception.  Note however, that this is not still not very optimal.  But is does kind of simulate TCO.
 
-So it is a decorator that you place on a tail-call recursive function.  This basically lets the function continue executing rather than throwing the `RuntimeError: maximum recursion depth exceeded` exception.

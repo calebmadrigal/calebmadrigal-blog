@@ -4,9 +4,8 @@ date: 2013-07-31 21:12:04
 layout: post
 slug: ipython-notebook-vps
 title: iPython Notebook on a VPS
-wordpress_id: 493
 category: python
-tags: python
+tags: python, matplotlib
 
 ## Overview
 
@@ -25,7 +24,7 @@ This is a guide to set up iPython Notebook (as a Server) on a [DigitalOcean](htt
 
 **Go to [http://freedns.afraid.org](http://freedns.afraid.org)** and click **"Setup an account here"** Go through the signup form Click on the activation link they send to your email This will bring you back to their site; Click the link you see there called **"Add a subdomain"** Here is how I filled out the form:
 
-![Create Domain](http://www.calebmadrigal.com/wp-content/uploads/2013/07/00_create_domain.png)
+![Create Domain](/static/images/00_create_domain.png)
 
 ### Notes:
 
@@ -40,19 +39,19 @@ For the tutorial, I'm using [Digital Ocean](https://www.digitalocean.com/), sinc
 
 Go to the Droplets tab and hit the button: "Create Droplet" ("Droplet" is how DigitalOcean refers to their VPSs):
 
-![Create Droplet](http://www.calebmadrigal.com/wp-content/uploads/2013/07/01_create_droplet.png)
+![Create Droplet](/static/images/01_create_droplet.png)
 
 **Enter the hostname** as the domain name you just set up above
 
-![Set hostname, size](http://www.calebmadrigal.com/wp-content/uploads/2013/07/02_create_droplet_size.png)
+![Set hostname, size](/static/images/02_create_droplet_size.png)
 
 Make sure you have **Ubuntu 12.04 x32** selected. You should be able to keep all the other default settings.
 
-![Select Ubuntu OS](http://www.calebmadrigal.com/wp-content/uploads/2013/07/03_create_droplet_os.png)
+![Select Ubuntu OS](/static/images/03_create_droplet_os.png)
 
 Click **"Create Droplet"** and then wait for it to be created. When it is done, you should see a screen like this:
 
-![Droplet created](http://www.calebmadrigal.com/wp-content/uploads/2013/07/04_droplet_created.png)
+![Droplet created](/static/images/04_droplet_created.png)
 
 **Make a note of the IP Address**
 
@@ -61,18 +60,19 @@ You will also receive an email that gives you the password for the root user on 
     IP: 192.241.162.4 (in my case)
     Username: root
     Password: mysecretpassword
-    
+
 
 If you are on mac or linux, you can just type the command:
     
     ssh root@192.241.162.4  # (of course, with your Droplet's IP Address)
-    
 
-_If you are on windows, you can use [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html)._
+
+**If you are on windows, you can use [Putty](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html).**
+
 
 Once you are logged in, you should see a prompt that looks something like this:
 
-![SSH](http://www.calebmadrigal.com/wp-content/uploads/2013/07/05_ssh.png)
+![SSH](/static/images/05_ssh.png)
 
 I recommend **changing your password**. To do this, just type `passwd`, and it will prompt you for a new password. If you do this, then you will login with that password from then on (instead of the one that was emailed to you).
 
@@ -88,24 +88,24 @@ Now you may have to wait for a few minutes (or hours) before you are able to acc
 Do this on a command-line (**Terminal** if on mac, **cmd** in windows, if you're on linux, then you know it :) ).
 
     ping ipynb.mooo.com # (or whatever your domain is).
-    
+
 You will know if the DNS change has propagated to you if you see your server's IP address in there. When I first tried it, the IP was still out of date:
 
-![Ping domain](http://www.calebmadrigal.com/wp-content/uploads/2013/07/06_ping.png)
+![Ping domain](/static/images/06_ping.png)
 
 ## Install iPython Notebook and its dependencies
     
     apt-get update # To update the repository
     apt-get install python-pip python-virtualenv python-numpy python-scipy
     pip install tornado pyzmq ipython
-    
+
 
 ## Create an SSL Certificate
 
 You will need an SSL Certificate below; to create it, enter the command below, and set the prompts as see fit to you:
     
     openssl req -x509 -nodes -newkey rsa:1024 -keyout ipython_cert.pem -out ipython_cert.pem
-    
+
 
 It should ask you a few questions, and look something like this:
     
@@ -128,13 +128,12 @@ It should ask you a few questions, and look something like this:
     Organizational Unit Name (eg, section) []:
     Common Name (e.g. server FQDN or YOUR name) []:Caleb
     Email Address []:caleb.madrigal@gmail.com
-    
 
 Move the certificate to the .ssh directory:
     
     mkdir /root/.ssl
     mv ipython_cert.pem /root/.ssl
-    
+
 ## Create a password hash
 
 You will need a password to protect you iPython Notebook from other people. So choose a password, and then follow these steps to get the hash of the password (which you will use below).
@@ -142,7 +141,7 @@ You will need a password to protect you iPython Notebook from other people. So c
 On the command-line, run:
 
     ipython
-    
+
 And type in the following (and enter your desired password at the "Enter password" prompt):
     
     In [1]: from IPython.lib import passwd
@@ -150,7 +149,7 @@ And type in the following (and enter your desired password at the "Enter passwor
     Enter password:
     Verify password:
     Out[4]: 'sha1:1219a393391f:5e453a30e31c69641678aba65e2e91aeadeb1068'
-    
+
 That output string, **'sha1:1219a393391f:5e453a30e31c6...'** is your hash. Save it, as you will use it below.
 
 ## Configure iPython Notebook
@@ -159,17 +158,16 @@ Create a directory to hold your iPython Notebook files (*.ipynb)
     
     cd /root
     mkdir pynb
-    
+
 
 Create a iPython Notebook profile
     
     ipython profile create nbserver
-    
 
 Edit the config file for iPython notebook for the newly created profile; NOTE: you can use nano place of vim if you don't know vim.
     
     vim /root/.ipython/profile_nbserver/ipython_notebook_config.py
-    
+
 Add the following lines to the top:
     
     c = get_config()
@@ -180,22 +178,22 @@ Add the following lines to the top:
     c.NotebookApp.password = u'REPLACE ME'
     c.NotebookApp.port = 4096
     c.NotebookManager.notebook_dir = u'/root/pynb'
-    
+
 **Make sure to replace the 'REPLACE ME' string with the password hash which you generated above**
 
 Now, to run iPython Notebook with all of these settings, you this command:
     
     ipython notebook --profile nbserver --pylab inline
-    
+
 And finally, you should be able to access your iPython Notebook server from anywhere from a URL like this (but with your own hostname instead of mine): https://ipython.mooo.com:4096/
 
 And it should look like this:
 
-![iPython Notebook running](http://www.calebmadrigal.com/wp-content/uploads/2013/07/07_signature_check.png)
+![iPython Notebook running](/static/images/07_signature_check.png)
 
 ## How to check that your certificate is correct
 
-Since you are not using a certificate signed by a certificate authority, you will need to be able to verify that the certificate is correct when you go to the iPython Notebook site. To do this, I recommend downloading the chrome extension put out by [https://www.signaturecheck.org/](https://www.signaturecheck.org/). Just Google for "Google Chrome Signature Check"
+Since you are not using a certificate signed by a certificate authority, you will need to be able to verify that the certificate is correct when you go to the iPython Notebook site. To do this, I recommend downloading the Chrome extension put out by [https://www.signaturecheck.org/](https://www.signaturecheck.org/). Just Google for "Google Chrome Signature Check"
 
 You can see me using it in the **image above**. Just memorize at least some of the digits in the MD5 or SHA1 Thumbprint. Else, you can write them down somewhere. It's okay if someone finds them; these numbers are meant to be public.
 
@@ -207,11 +205,11 @@ Find the path of ipython:
     
     root@ipynb:~# which ipython
     /usr/local/bin/ipython
-    
+
 Add this line to the file: `/etc/rc.local`
     
     /usr/local/bin/ipython notebook --profile nbserver --pylab inline
-    
+
 Now you should be able to reboot, and you should be able to access your iPython Notebook as before. So at this point, even if the server reboots, iPython Notebook will be started again.
 
 To test this, type `reboot` into the command-line. This will boot you out of SSH, but you should be able to reconnect in a minute or 2. After the server has had time to reboot, you should see if you can access your iPython Notebook server (as done above). If so, everything is working.

@@ -4,14 +4,11 @@ date: 2012-02-08 17:11:48
 layout: post
 slug: string-to-base64-string-in-objective-c
 title: String to Base64 String in Objective-C
-wordpress_id: 86
 category: objective-c
 tags: ios, objective-c
 
 Today, I needed to convert an ASCII-encoded NSString to a base64 NSString.  I found a number of methods that convert from an NSString to a Base64 NSData, or from NSData to a Base64 string, but couldn't find one that did exactly what I needed.  So here is a method that simply converts an NSString to a Base64 NSString:
 
-
-    
     
     + (NSString *)base64String:(NSString *)str
     {
@@ -45,8 +42,7 @@ Today, I needed to convert an ASCII-encoded NSString to a base64 NSString.  I fo
         
         return [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
     }
-    
-
 
 
 Note that the base code (which I slightly modified) was taken from this [Stackoverflow answer](http://stackoverflow.com/questions/6006823/how-to-get-base64-nsstring-from-nsdata).
+

@@ -4,8 +4,8 @@ date: 2012-04-11 19:36:30
 layout: post
 slug: embedding-xslt-xml-document
 title: Embedding an XSLT in an XML document
-wordpress_id: 183
-category: html, programming
+category: programming
+tags: html
 
 Today, I had this XML document which I was wanting to make viewable in a browser.  My plan was to run the XML document through an XSLT engine to transform it into an HTML document (which could then be opened in a browser).
 
@@ -14,14 +14,14 @@ Instead, I found that I could just embed the XSLT directly in the XML document. 
 Here's an example:
 
 
-    
-    
-    
-    
-    
+    <?xml version="1.0" encoding="ISO-8859-1"?>
+    <?xml-stylesheet type="text/xml" href="#stylesheet"?>
+    <!DOCTYPE catelog [
+    <!ATTLIST xsl:stylesheet
+      id    ID  #REQUIRED>
     ]>
     <catalog>
-    <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" id="stylesheet">
+    <xsl:stylesheet id="stylesheet" version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:template match="/">
       <html>
       <body>
@@ -33,8 +33,8 @@ Here's an example:
           </tr>
           <xsl:for-each select="catalog/cd">
           <tr>
-            <td><xsl:value-of select="title"></xsl:value-of></td>
-            <td><xsl:value-of select="artist"></xsl:value-of></td>
+            <td><xsl:value-of select="title"/></td>
+            <td><xsl:value-of select="artist"/></td>
           </tr>
           </xsl:for-each>
         </table>
@@ -42,7 +42,7 @@ Here's an example:
       </html>
     </xsl:template>
     </xsl:stylesheet>
-    
+ 
         <cd>
             <title>Empire Burlesque</title>
             <artist>Bob Dylan</artist>
@@ -60,16 +60,14 @@ Here's an example:
             <year>1988</year>
         </cd>
     </catalog>
-    
-
 
 
 And this renders as such:
-[![](http://www.calebmadrigal.com/wp-content/uploads/2012/04/embedded_xslt_screenshot.png)](http://www.calebmadrigal.com/wp-content/uploads/2012/04/embedded_xslt_screenshot.png)
+
+![XSLT Render](/static/images/embedded_xslt_screenshot.png)
 
 Please note that this doesn't work for Internet Explorer.  For IE, the XSL document must be referenced like this:
 
-    
-    
-    
-    
+    <?xml-stylesheet type="text/xml" href="report.xsl"?>
+
+
