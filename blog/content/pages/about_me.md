@@ -6,7 +6,7 @@ slug: about-me
 title: About Me
 wordpress_id: 6
 
-![](http://www.calebmadrigal.com/wp-content/uploads/2012/01/me_at_central_park1.jpg)
+![Me at central park](/static/images/me_at_central_park1.jpg)
 
 	
   * I find bulleted lists easier to visually parse than paragraphs
