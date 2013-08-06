@@ -36,6 +36,9 @@ GOOGLE_ANALYTICS = 'UA-31212664-1'
 STATIC_OUT_DIR = ''
 STATIC_PATHS = ['images', 'code']
 
+CODE_DIR = 'code'
+NOTEBOOK_DIR = 'code'
+
 FILES_TO_COPY = (
     ('extra/favicon.ico', 'favicon.ico'),
     ('extra/robots.txt', 'robots.txt'))
@@ -57,15 +60,14 @@ FEED_ATOM = 'atom.xml'
 SOCIAL = (('github', 'http://github.com/calebmadrigal'),
           ('linkedin', 'http://www.linkedin.com/pub/caleb-madrigal/40/489/2b8/'))
 
-DEFAULT_PAGINATION = False
-
-# Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
-
+####### Themes and Plugins #######
 THEME = '../pelican-octopress-theme/'
 PLUGIN_PATH = '../pelican-plugins'
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', #'liquid_tags.notebook',
            'liquid_tags.literal']
 
+####### Misc #######
+DEFAULT_PAGINATION = False
 SEARCH_BOX = True
+

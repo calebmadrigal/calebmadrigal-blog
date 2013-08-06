@@ -5,8 +5,6 @@ layout: page
 slug: resume
 title: Resume
 
-My Resume:
-
 * [Markdown format on Github](https://github.com/calebmadrigal/Resume/blob/master/resume_caleb_madrigal.md)
 * [PDF](https://github.com/calebmadrigal/Resume/blob/master/resume_caleb_madrigal.pdf?raw=true)
 
