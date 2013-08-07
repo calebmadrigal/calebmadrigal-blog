@@ -3,22 +3,22 @@ comments: true
 date: 2013-07-31 21:12:04
 layout: post
 slug: ipython-notebook-vps
-title: iPython Notebook on a VPS
+title: IPython Notebook on a VPS
 category: python
 tags: python, matplotlib
 
 ## Overview
 
-This is a guide to set up iPython Notebook (as a Server) on a [DigitalOcean](https://www.digitalocean.com/) VPS. This will allow you to access your [iPython Notebooks](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html) from anywhere.
+This is a guide to set up IPython Notebook (as a Server) on a [DigitalOcean](https://www.digitalocean.com/) VPS. This will allow you to access your [iPython Notebooks](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html) from anywhere.
 
 ### Overview of Steps:
 
   * Set up a domain name
   * Get a VPS
-  * Install iPython Notebook (and all dependencies)
-  * Configure iPython Notebook to run in a server mode
+  * Install IPython Notebook (and all dependencies)
+  * Configure IPython Notebook to run in a server mode
   * Add SSL
-  * Make iPython Notebook start automatically
+  * Make IPython Notebook start automatically
 
 ## Create a domain
 
@@ -93,7 +93,7 @@ You will know if the DNS change has propagated to you if you see your server's I
 
 ![Ping domain](/static/images/06_ping.png)
 
-## Install iPython Notebook and its dependencies
+## Install IPython Notebook and its dependencies
     
     apt-get update # To update the repository
     apt-get install python-pip python-virtualenv python-numpy python-scipy
@@ -136,7 +136,7 @@ Move the certificate to the .ssh directory:
 
 ## Create a password hash
 
-You will need a password to protect you iPython Notebook from other people. So choose a password, and then follow these steps to get the hash of the password (which you will use below).
+You will need a password to protect you IPython Notebook from other people. So choose a password, and then follow these steps to get the hash of the password (which you will use below).
 
 On the command-line, run:
 
@@ -152,19 +152,19 @@ And type in the following (and enter your desired password at the "Enter passwor
 
 That output string, **'sha1:1219a393391f:5e453a30e31c6...'** is your hash. Save it, as you will use it below.
 
-## Configure iPython Notebook
+## Configure IPython Notebook
 
-Create a directory to hold your iPython Notebook files (*.ipynb)
+Create a directory to hold your IPython Notebook files (*.ipynb)
     
     cd /root
     mkdir pynb
 
 
-Create a iPython Notebook profile
+Create a IPython Notebook profile
     
     ipython profile create nbserver
 
-Edit the config file for iPython notebook for the newly created profile; NOTE: you can use nano place of vim if you don't know vim.
+Edit the config file for IPython notebook for the newly created profile; NOTE: you can use nano place of vim if you don't know vim.
     
     vim /root/.ipython/profile_nbserver/ipython_notebook_config.py
 
@@ -181,25 +181,25 @@ Add the following lines to the top:
 
 **Make sure to replace the 'REPLACE ME' string with the password hash which you generated above**
 
-Now, to run iPython Notebook with all of these settings, you this command:
+Now, to run IPython Notebook with all of these settings, you this command:
     
     ipython notebook --profile nbserver --pylab inline
 
-And finally, you should be able to access your iPython Notebook server from anywhere from a URL like this (but with your own hostname instead of mine): https://ipython.mooo.com:4096/
+And finally, you should be able to access your IPython Notebook server from anywhere from a URL like this (but with your own hostname instead of mine): https://ipython.mooo.com:4096/
 
 And it should look like this:
 
-![iPython Notebook running](/static/images/07_signature_check.png)
+![IPython Notebook running](/static/images/07_signature_check.png)
 
 ## How to check that your certificate is correct
 
-Since you are not using a certificate signed by a certificate authority, you will need to be able to verify that the certificate is correct when you go to the iPython Notebook site. To do this, I recommend downloading the Chrome extension put out by [https://www.signaturecheck.org/](https://www.signaturecheck.org/). Just Google for "Google Chrome Signature Check"
+Since you are not using a certificate signed by a certificate authority, you will need to be able to verify that the certificate is correct when you go to the IPython Notebook site. To do this, I recommend downloading the Chrome extension put out by [https://www.signaturecheck.org/](https://www.signaturecheck.org/). Just Google for "Google Chrome Signature Check"
 
 You can see me using it in the **image above**. Just memorize at least some of the digits in the MD5 or SHA1 Thumbprint. Else, you can write them down somewhere. It's okay if someone finds them; these numbers are meant to be public.
 
-## Set up iPython Notebook to start automatically
+## Set up IPython Notebook to start automatically
 
-So that you don't have to log in to SSH to get iPython Notebook running, you can set up supervisord to start it for you:
+So that you don't have to log in to SSH to get IPython Notebook running, you can set up supervisord to start it for you:
 
 Find the path of ipython:
     
@@ -210,16 +210,16 @@ Add this line to the file: `/etc/rc.local`
     
     /usr/local/bin/ipython notebook --profile nbserver --pylab inline
 
-Now you should be able to reboot, and you should be able to access your iPython Notebook as before. So at this point, even if the server reboots, iPython Notebook will be started again.
+Now you should be able to reboot, and you should be able to access your IPython Notebook as before. So at this point, even if the server reboots, iPython Notebook will be started again.
 
-To test this, type `reboot` into the command-line. This will boot you out of SSH, but you should be able to reconnect in a minute or 2. After the server has had time to reboot, you should see if you can access your iPython Notebook server (as done above). If so, everything is working.
+To test this, type `reboot` into the command-line. This will boot you out of SSH, but you should be able to reconnect in a minute or 2. After the server has had time to reboot, you should see if you can access your IPython Notebook server (as done above). If so, everything is working.
 
 ## Final Notes
 
   * Remember to always check the SSL signature before typing your passoword in. If you don't, then it is possible that there is a Man-in-the-Middle attack going on, and someone evil could see your password
-  * You are typically encouraged not to run things with root, but if iPython Notebook is all you are using this VPS for, then it should be fine.
+  * You are typically encouraged not to run things with root, but if IPython Notebook is all you are using this VPS for, then it should be fine.
   * You are typically encouraged to run python stuff in a virtualenv. That is typically good, but for simplicity, I didn't include it in this tutorial.
-  * For now, you cannot organize iPython Notebooks in subdirectories (and access them all with a single running instance of iPython Notebook). But that should be coming in the future: https://github.com/ipython/ipython/wiki/IPEP-16%3A-Notebook-multi-directory-dashboard-and-URL-mapping
+  * For now, you cannot organize IPython Notebooks in subdirectories (and access them all with a single running instance of iPython Notebook). But that should be coming in the future: https://github.com/ipython/ipython/wiki/IPEP-16%3A-Notebook-multi-directory-dashboard-and-URL-mapping
 
 ## THE END
 

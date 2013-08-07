@@ -19,7 +19,7 @@ Since I've been getting into Machine Learning/Artificial Intelligence recently, 
 
 Of these, I've tried Octave and Matplotlib.  Matplotlib/Pylab is the software stack consisting of:
 	
-  * [iPython](http://ipython.org/) - an interactive REPL for Python with things like tab completion
+  * [IPython](http://ipython.org/) - an interactive REPL for Python with things like tab completion
   * [Matplotlib](http://matplotlib.sourceforge.net/) - a graphical plotting library
   * [NumPy](http://numpy.scipy.org/) - a matrix library
   * [SciPy](http://www.scipy.org/) - a collection of scientific and mathematical algorithms

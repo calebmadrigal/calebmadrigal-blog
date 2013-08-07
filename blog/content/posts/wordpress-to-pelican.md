@@ -52,7 +52,7 @@ See:
     # Result: 1.6180339887498947
     reduce(lambda acc,_: (acc+1.0)/acc, xrange(100), 1)
 
-### Ability to embed iPython Notebooks
+### Ability to embed IPython Notebooks
 * I'm still in the process of setting this up
 
 
