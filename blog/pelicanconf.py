@@ -27,6 +27,10 @@ TAG_SAVE_AS = TAG_URL + 'index.html'
 CATEGORY_URL = 'topics/{slug}/'
 CATEGORY_SAVE_AS = CATEGORY_URL + 'index.html'
 
+# PAGES; Make pages urls be in the form: "calebmadrigal.com/pages/about-me/"
+PAGE_URL = 'pages/{slug}/'
+PAGE_SAVE_AS = 'pages/{slug}/index.html'
+
 
 # Disqus and Google analytics
 DISQUS_SITENAME = 'calebmadrigal'
