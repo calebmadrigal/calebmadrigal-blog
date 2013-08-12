@@ -12,7 +12,7 @@ description: Reasons I moved from Wordpress to Pelican for my blogging needs
 I recently migrated my blog from [Wordpress](http://wordpress.org/) to [Pelican](http://docs.getpelican.com/en/3.2/).  Pelican is a static-site generating blog system which is written in Python and uses [Jinja2](http://jinja.pocoo.org/docs/) for templating.  I'll probably do a post about the migration process later, but for now, I'll just give **my reasons for moving to Pelican...**
 
 ### Data Longevity
-* I didn't want my blog data stored in a database; I vastly prefer it being stored in version-controlled Markdown format.
+I didn't want my blog data stored in a database; I vastly prefer it being stored in version-controlled Markdown format.
 
 ### Markdown
 * I wanted to write blog posts in [Markdown](http://en.wikipedia.org/wiki/Markdown) (which is possible in Wordpress, but Wordpress isn't designed to use Markdown).
@@ -31,13 +31,13 @@ I recently migrated my blog from [Wordpress](http://wordpress.org/) to [Pelican]
 * It's true that Wordpress has it's own version control, but I trust (and enjoy) git a lot more.
 
 ### Mobility
-* Because everything is in git, and because I only need basic static HTML webserver capabilities, I can host my site just about anywhere.  So I can easily change hosts if I see fit.
+Because everything is in git, and because I only need basic static HTML webserver capabilities, I can host my site just about anywhere.  So I can easily change hosts if I see fit.
 
 ### Nice Octopress theme
-* The default Pelican theme is pretty bad, but I love the [Octopress](http://octopress.org) theme, which has been [ported](https://github.com/duilio/pelican-octopress-theme) to Pelican.
+The default Pelican theme is pretty bad, but I love the [Octopress](http://octopress.org) theme, which has been [ported](https://github.com/duilio/pelican-octopress-theme) to Pelican.
 
 ### Speed
-* [nginx](http://nginx.org/en/) serving static HTML/JS/CSS files is very fast.  Preliminary tests showed that my site would load 3-10x faster than with wordpress.
+[nginx](http://nginx.org/en/) serving static HTML/JS/CSS files is **very fast**.  Preliminary tests showed that my site would load **3-10x** faster than with wordpress.
 
 ### Staging changes and easy deployment
 * In Pelican, I can make large changes to the entire blog, regenerate it, and run a staging server to verify that my changes work before ever deploying them.
@@ -47,14 +47,23 @@ I recently migrated my blog from [Wordpress](http://wordpress.org/) to [Pelican]
 * The command to deploy is `make ssh_upload`
 
 ### Nicer syntax highlighting
-* Pelican has very nice `syntax highlighting` with [Pygments](http://pygments.org/)
+Pelican has very nice `syntax highlighting` with [Pygments](http://pygments.org/)
 
 See:
 
     # Result: 1.6180339887498947
     reduce(lambda acc,_: (acc+1.0)/acc, xrange(100), 1)
 
+### Easy code file inclusion
+Include code syntax:
+
+    {% literal include_code python/liquid_tags_test.py lang:python %}
+
+Result:
+
+{% include_code python/liquid_tags_test.py lang:python %}
+
 ### Ability to embed IPython Notebooks
-* I'm still in the process of setting this up
+I'm still in the process of setting this up
 
 
