@@ -9,7 +9,7 @@ tags: python, matplotlib
 
 ## Overview
 
-This is a guide to set up IPython Notebook (as a Server) on a [DigitalOcean](https://www.digitalocean.com/) VPS. This will allow you to access your [iPython Notebooks](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html) from anywhere.
+This is a guide to set up IPython Notebook on a Server - specifically, on a [DigitalOcean](https://www.digitalocean.com/) VPS. This will allow you to access your [iPython Notebooks](http://ipython.org/ipython-doc/dev/interactive/htmlnotebook.html) from anywhere.
 
 ### Overview of Steps:
 
