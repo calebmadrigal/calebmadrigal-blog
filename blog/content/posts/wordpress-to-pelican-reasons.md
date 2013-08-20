@@ -6,8 +6,6 @@ slug: wordpress-to-pelican-reasons
 title: Wordpress to Pelican Reasons
 category: python
 tags: python
-keywords: wordpress to pelican python blog
-description: Reasons I moved from Wordpress to Pelican for my blogging needs
 
 I recently migrated my blog from [Wordpress](http://wordpress.org/) to [Pelican](http://docs.getpelican.com/en/3.2/).  Pelican is a static-site generating blog system which is written in Python and uses [Jinja2](http://jinja.pocoo.org/docs/) for templating.  I'll probably do a post about the migration process later, but for now, I'll just give **my reasons for moving to Pelican...**
 
