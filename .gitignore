@@ -41,3 +41,6 @@ blog/output
 blog/pelican.pid
 blog/srv.pid
 
+# Ignore IPython Notebook Checkpoints
+.ipynb_checkpoints
+
