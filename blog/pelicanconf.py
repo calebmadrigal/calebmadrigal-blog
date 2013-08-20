@@ -75,3 +75,6 @@ PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
 DEFAULT_PAGINATION = False
 SEARCH_BOX = True
 
+####### IPython Notebook Stuff #######
+EXTRA_HEADER = open('_nb_header.html').read().decode('utf-8')
+

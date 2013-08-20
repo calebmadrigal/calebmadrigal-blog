@@ -64,6 +64,13 @@ Result:
 {% include_code python/liquid_tags_test.py lang:python %}
 
 ### Ability to embed IPython Notebooks
-I'm still in the process of setting this up
+
+Thanks to [Jake VanderPlas](http://jakevdp.github.io/blog/2013/05/07/migrating-from-octopress-to-pelican/#This-Is-An-IPython-Notebook) [liquid_tags plugin](https://github.com/jakevdp/pelican-plugins/tree/liquid_tags/liquid_tags), I can embed an IPython Notebook like this:
+
+    {% literal notebook ipython_notebook/EmbedNotebookExample.ipynb %}
+
+Which looks like this:
+
+{% notebook ipython_notebook/EmbedNotebookExample.ipynb %}
 
 
