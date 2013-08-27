@@ -5,7 +5,7 @@ layout: post
 slug: ipython-notebook-vps
 title: IPython Notebook on a VPS
 category: python
-tags: python, matplotlib
+tags: python, matplotlib, ipython-notebook
 
 ## Overview
 

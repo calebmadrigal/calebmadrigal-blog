@@ -4,8 +4,8 @@ date: 2013-07-29 21:20:15
 layout: post
 slug: big-graphs-ipython-notebook
 title: Big graphs in IPython Notebook
-tags: python, matplotlib
 category: python
+tags: python, matplotlib, ipython-notebook
 
 I've been doing a good bit of [graphing](https://github.com/calebmadrigal/FourierTalkOSCON) in IPython Notebook recently, and I often wanted to make the graphs larger.  I also often wanted to label the graph axes.  So I wrote this simple function and have been using it a lot.
 
@@ -21,9 +21,7 @@ I've been doing a good bit of [graphing](https://github.com/calebmadrigal/Fourie
         ax.set_ylabel(y_label)
 
 
-Here's what it looks like to use it:
+Here's a demo of using it...
 
-![setup_graph_demo](/static/images/setup_graph_demo.png)
-
-As you can see, you simply call `setup_graph` before your call to `pylab.plot()` in IPython Notebook.
+{% notebook ipython_notebook/SetupGraphDemo.ipynb cells[2:] %}
 

@@ -5,7 +5,7 @@ layout: post
 slug: monte-carlo-in-python
 title: Monte Carlo In Python
 category: math
-tags: math, python
+tags: math, python, ipython-notebook
 
 Monte Carlo Estimation is a method of numerically estimating things which we don't (or can't) calculate numerically by randomly generating samples. In this IPython Notebook, I'm going to use Monte Carlo Estimation to estimate:
 

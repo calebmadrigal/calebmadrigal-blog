@@ -5,7 +5,7 @@ layout: post
 slug: pandas_intro
 title: Pandas Into
 category: python
-tags: python
+tags: python, ipython-notebook
 
 I've recently been playing with the [pandas](http://pandas.pydata.org/) Python data analysis framework while reading the [Python for Data Analysis book](http://shop.oreilly.com/product/0636920023784.do) (which is written by the author of the pandas library).  Here are 2 of my IPython Notebooks that demonstrate some of the basics:
 
