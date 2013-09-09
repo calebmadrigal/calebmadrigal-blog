@@ -9,5 +9,7 @@ tags: matplotlib, python, ipython-notebook
 
 Simple example to show how to draw lines with Matplotlib (in IPython Notebook).
 
+    ipython notebook --pylab inline
+
 {% notebook ipython_notebook/DrawingLines.ipynb %}
 
