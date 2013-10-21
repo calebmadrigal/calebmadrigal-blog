@@ -129,7 +129,7 @@ It should ask you a few questions, and look something like this:
     Common Name (e.g. server FQDN or YOUR name) []:Caleb
     Email Address []:caleb.madrigal@gmail.com
 
-Move the certificate to the .ssh directory:
+Move the certificate to the .ssl directory:
     
     mkdir /root/.ssl
     mv ipython_cert.pem /root/.ssl
@@ -172,7 +172,7 @@ Add the following lines to the top:
     
     c = get_config()
     c.IPKernalApp.pylab = 'inline'
-    c.NotebookApp.certfile = u'/root/.ssh/ipython_cert.pem'
+    c.NotebookApp.certfile = u'/root/.ssl/ipython_cert.pem'
     c.NotebookApp.ip = '*'
     c.NotebookApp.open_browser = False
     c.NotebookApp.password = u'REPLACE ME'
