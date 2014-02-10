@@ -5,16 +5,11 @@ layout: page
 slug: about-me
 title: About Me
 
-![Me at central park](/static/images/me_at_central_park1.jpg)
+![Me at central park](/static/images/caleb_madrigal_in_woods_600px.jpg)
 
-	
-  * I find bulleted lists easier to visually parse than paragraphs
-  * I'm a software engineer at SpiderLogic in Milwaukee, WI
-  * My most recent programming endeavors have been in: Objective-C, Java, Python, and C.
-  * I'm currently learning more about Objective-C, Machine Learning, Artificial Intelligence, Arduino, Scheme, Octave, Statistics/Probability, and Functional Programming
+  * I'm a Python Consultant in Milwaukee.
+  * My most recent development has been in: Python, Django, Flask, Javascript, Node.js, Angular.js, Bootstrap, and Objective-C.
   * [My github page](https://github.com/calebmadrigal)
   * [My LinkedIn page](http://www.linkedin.com/pub/caleb-madrigal/40/489/2b8)
   * [My Facebook page](https://www.facebook.com/caleb.madrigal)
-
-
 
