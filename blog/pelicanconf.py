@@ -11,6 +11,7 @@ SITESUBTITLE = u'Welcome to my domain'
 SITEURL = u'http://calebmadrigal.com'
 TIMEZONE = 'US/Central'
 DEFAULT_LANG = u'en'
+SUMMARY_MAX_LENGTH = 128
 
 ####### URL Setup #######
 
