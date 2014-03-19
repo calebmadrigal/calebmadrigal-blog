@@ -2,8 +2,8 @@ author: Caleb Madrigal
 comments: true
 date: 2014-03-12 23:30:00
 layout: post
-slug: stay-away-stay-away
-title: Stay away, stay away
+slug: the-deep-ocean-skies
+title: The deep ocean skies
 category: poetry
 tags: poetry, personal-thoughts
 
