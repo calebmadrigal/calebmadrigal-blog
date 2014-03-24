@@ -2,8 +2,8 @@ author: Caleb Madrigal
 comments: true
 date: 2014-03-24 00:07:00
 layout: post
-slug: analogies-and-facts
-title: Analogies and Facts
+slug: analogies-like-functions
+title: Analogies are like functions
 category: personal-thoughts
 tags: personal-thoughts
 
