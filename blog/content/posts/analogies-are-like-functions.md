@@ -2,7 +2,7 @@ author: Caleb Madrigal
 comments: true
 date: 2014-03-24 00:07:00
 layout: post
-slug: analogies-like-functions
+slug: analogies-are-like-functions
 title: Analogies are like functions
 category: personal-thoughts
 tags: personal-thoughts
