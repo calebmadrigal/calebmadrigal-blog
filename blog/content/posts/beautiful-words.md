@@ -21,5 +21,5 @@ Here is my list:
 * Evermore
 * Cognac
 * vis-à-vis
-* Commandeered 
+* Commandeer
 
