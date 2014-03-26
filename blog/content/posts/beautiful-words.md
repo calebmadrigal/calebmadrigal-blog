@@ -4,8 +4,8 @@ date: 2014-03-25 20:30:00
 layout: post
 slug: beautiful-words
 title: Beautiful words
-category: poetry
-tags: poetry, personal-thoughts
+category: personal-thoughts
+tags: personal-thoughts
 
 Over the last several years, I've been writing down words (or sets of words) which I consider to be particularly beautiful.
 
