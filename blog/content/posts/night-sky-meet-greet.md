@@ -36,7 +36,7 @@ Wind
 And I
   Trembling
     Merely
-      Breath
+      Breathe
 </pre>
 
 * Author: Caleb Madrigal
