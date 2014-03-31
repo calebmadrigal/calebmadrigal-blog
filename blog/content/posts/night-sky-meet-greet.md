@@ -19,9 +19,9 @@ Noir
       “Squeak!"
 
 Piny
-  Forest 
+  Forests
     Upward
-      Creeps
+      Creep
 
 Burning
   Orbs
