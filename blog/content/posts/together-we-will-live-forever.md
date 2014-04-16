@@ -14,7 +14,7 @@ tags: poetry, personal-thoughts
 But for now I will hold you in my embrace
 Though fleeting be this time and place.
 
-But fear not my love, there is more!
+Fear not my love, there is more!
 Just wait till we reach that other shore.
 
 Beauty will become us - you and I,
