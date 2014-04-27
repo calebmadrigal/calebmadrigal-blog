@@ -27,3 +27,7 @@ From the deep ocean skies.
 * Date written: 3/10/2014
 * Inspiration: Sometimes, when I need to get work done, I have to stay away from things which will get me into an artistic, or I'll be swept up in it for hours.
 
+I think [Ali Jardine](https://www.flickr.com/photos/alijardine/11360839004/) was going for the same idea in this beautiful picture:
+
+![Ali Jardine ocean sky](/static/images/ali_jardine_ocean_sky.jpg)
+
