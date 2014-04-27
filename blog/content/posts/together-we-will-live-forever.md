@@ -8,7 +8,7 @@ category: poetry
 tags: poetry, personal-thoughts
 
 <pre>
-"We all will die."
+"We all must die."
 "That's beautiful!", she cried.
 
 But for now I will hold you in my embrace

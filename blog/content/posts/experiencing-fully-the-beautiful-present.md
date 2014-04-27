@@ -8,9 +8,9 @@ category: poetry
 tags: poetry, personal-thoughts
 
 <pre>
-He views the world through an unfiltered mind
-No defenses built up, layers over time
-He sees it in all of it shining brilliance
+He views the world through an unfiltered mind -
+No defenses built up, layers over time.
+He sees it in all its shining brilliance
 Experiencing fully the beautiful present.
 </pre>
 

@@ -11,7 +11,7 @@ tags: poetry, personal-thoughts
 Words are a song, and I drink them in
 And drunken, fall from the parapet -
 Into the heart and out of the mind,
-And swim in the shimmering ocean within.
+And swim in the shimmering ocean inside.
 </pre>
 
 * Author: Caleb Madrigal

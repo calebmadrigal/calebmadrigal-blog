@@ -8,8 +8,8 @@ category: poetry
 tags: poetry, personal-thoughts
 
 <pre>
-Stay away, stay away;
-Keep away from the bay.
+Stay away! Stay away!
+Keep away from the bay!
 You know that at night,
 Will in come the tide,
 Sweeping out the mind
@@ -18,7 +18,7 @@ That is near the seaside.
 And into this sky
 You'll sink and you'll fly,
 Fish floating by,
-Enchanting your eyes.
+Enchanting your eyes,
 No more to rise
 From the deep ocean skies.
 </pre>

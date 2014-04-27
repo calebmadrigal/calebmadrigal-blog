@@ -10,16 +10,16 @@ tags: poetry, personal-thoughts
 <pre>
 Oft on cold and starry nights,
 He raises arms, and the battle fights.
-And storms the castle of my mind
+And storms the castle of my mind,
 Removing from the throne my logical side.
 
 And having the ship commandeered,
-Into the stormy winds he steers
+Into the stormy winds he steers,
 And brings us into crashing waves -
 Deep oceans are within his gaze.
 
-And rejoicing on the captain's deck
-Tiring of appointments to respect
+And rejoicing on the captain's deck,
+Tiring of appointments to respect,
 He does not care if we should wreck
 But only in beauty does he invest.
 
