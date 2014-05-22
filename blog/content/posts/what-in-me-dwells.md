@@ -2,8 +2,8 @@ author: Caleb Madrigal
 comments: true
 date: 2014-05-15 14:25:00
 layout: post
-slug: what-within-me-dwells
-title: What within me dwells
+slug: what-in-me-dwells
+title: What in me dwells
 category: poetry
 tags: poetry, personal-thoughts
 
@@ -13,7 +13,7 @@ That words cannot express?
 Can't play my music loud enough
 To this one coalesce.
 
-I cannot run so fast
+I cannot run so fast, no
 Or flee it on my bike.
 And if I scream my lungs out
 I'm still not satisfied.
@@ -21,7 +21,7 @@ I'm still not satisfied.
 This craving is for more
 Than I can ever tell.
 But if you feel this feeling
-You know what within me dwells.
+You know what in me dwells.
 </pre>
 
 * Author: Caleb Madrigal
