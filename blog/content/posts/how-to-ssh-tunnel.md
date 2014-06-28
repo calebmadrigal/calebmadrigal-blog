@@ -18,7 +18,7 @@ An SSH Tunnel is perfect for the following scenarios:
 
 An SSH Tunnel is where you tell your local SSH Client to forward your local computer's traffic to a specified SSH Server (over the encrypted SSH protocol). The SSH Server will then act as a proxy for all requests you make on your local computer.
 
-![SSH Tunnel](/images/ssh_tunnel.png)
+![SSH Tunnel](/static/images/ssh_tunnel.png)
 
 ## How to set up an SSH Tunnel
 
@@ -38,8 +38,7 @@ Run this command on your local computer:
 
 Open the network settings, find the Network Proxy configuration section, and set `localhost:5000` as a SOCKS proxy:
 
-![SOCKS proxy network settings](images/ssh_tunnel_proxy_ubuntu.png)
-
+![SOCKS proxy network settings](/static/images/ssh_tunnel_proxy_ubuntu.png)
 
 ## Ride the tube!
 
