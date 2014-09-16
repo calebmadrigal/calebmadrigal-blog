@@ -4,7 +4,7 @@ date: 2014-09-15 19:36:00
 layout: post
 slug: sessions-in-nodejs-expressjs
 title: Sessions in Node.js and Express.js
-category: javascripot
+category: javascript
 tags: javascript, nodejs, expressjs
 
 In the process of trying to explain to a friend how sessions work, I decided to write a barebones example to demonstrate how to do sessions in Node.js with Express.js.
