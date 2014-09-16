@@ -1,6 +1,6 @@
 author: Caleb Madrigal
 comments: true
-date: 2014-09-15 19:10:00
+date: 2014-07-12 16:10:00
 layout: post
 slug: on-abstract-art
 title: On Abstract Art
@@ -11,5 +11,4 @@ Too much detail in art is profanity - a vulgar attempt to sum up that which is b
 
 Example:
 
-![Jesus](/static/images/jesus_heart.jpg)
-
+<img src="/static/images/jesus_heart.jpg" style="width:300px; height:222px" />

@@ -1,6 +1,6 @@
 author: Caleb Madrigal
 comments: true
-date: 2014-07-13 00:20:00
+date: 2014-09-15 19:36:00
 layout: post
 slug: sessions-in-nodejs-expressjs
 title: Sessions in Node.js and Express.js
@@ -14,10 +14,12 @@ In the process of trying to explain to a friend how sessions work, I decided to 
 And Here's what it looks like:
 
 Before you enter your name:
-![Before you enter a name](/static/images/session_example_1.png)
+
+<img src="/static/images/session_example_1.png" style="width:190px; height:73px" />
 
 After you enter your name:
-![After you enter a name](/static/images/session_example_2.png)
+
+<img src="/static/images/session_example_2.png" style="width:98px; height:72px" />
 
 And here is the code:
 
