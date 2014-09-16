@@ -7,7 +7,7 @@ title: Why I changed my mind about Node.js
 category: javascript
 tags: javascript, nodejs, expressjs
 
-<img src="/static/images/nodejs-logo.png" style="width:259px; height:121px" />
+<img src="/static/images/nodejs-logo.png" style="width:259px; height:141px" />
 
 # Intro
 
@@ -31,7 +31,7 @@ That’s pretty serious! That’s what got me interested.
 
 # Package manager - NPM
 
-<img src="/static/images/npm-logo.png" style="width:300px; height:150px" />
+<img src="/static/images/npm-logo.png" style="width:300px; height:170px" />
 
 So I started looking into Node.js for myself, and found many wonderful things. First, it has a wonderful package management system called [npm](https://www.npmjs.org/). With npm, you can install practically any Node.js package/library by running “npm install package-name”. Node.js also has nice conventions for keeping track of dependencies with a package.json file. With this, you can simply clone a Node.js repo, and run “npm install” to install all of the necessary dependencies.
 
