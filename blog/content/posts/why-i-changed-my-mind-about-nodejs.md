@@ -7,7 +7,7 @@ title: Why I changed my mind about Node.js
 category: javascript
 tags: javascript, nodejs, expressjs
 
-<img src="/static/images/nodejs-logo.png" style="width:259px; height:101px" />
+<img src="/static/images/nodejs-logo.png" style="width:259px; height:121px" />
 
 # Intro
 
