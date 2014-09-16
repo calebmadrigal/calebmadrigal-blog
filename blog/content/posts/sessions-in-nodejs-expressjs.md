@@ -19,7 +19,7 @@ Before you enter your name:
 
 After you enter your name:
 
-<img src="/static/images/session_example_2.png" style="width:98px; height:92px" />
+<img src="/static/images/session_example_2.png" style="width:98px; height:72px" />
 
 And here is the code:
 
