@@ -54,3 +54,7 @@ Lastly, one of Node.js’s biggest advantages is also what may seem to be a disa
 
 Use Node.js! It's fun, easy to learn, and (I'm betting) will continue to gain prominence in the upcoming years.
 
+**More comments on Hacker News: <https://news.ycombinator.com/item?id=8324890>**
+
+
+
