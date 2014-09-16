@@ -7,9 +7,9 @@ title: On Abstract Art
 category: personal-thoughts
 tags: art, personal-thoughts
 
-*Too much detail in art is profanity - a vulgar attempt to sum up that which is beyond finite expression.*
+Too much detail in art is profanity - a vulgar attempt to sum up that which is beyond finite expression.
 
-For example:
+Case in point:
 
 ![Jesus](/static/images/jesus_heart.jpg)
 
