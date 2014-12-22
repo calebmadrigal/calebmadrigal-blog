@@ -9,6 +9,3 @@ tags: art, personal-thoughts
 
 Too much detail in art is profanity - a vulgar attempt to sum up that which is beyond finite expression.
 
-Example:
-
-<img src="/static/images/jesus_heart.jpg" style="width:300px; height:222px" />
