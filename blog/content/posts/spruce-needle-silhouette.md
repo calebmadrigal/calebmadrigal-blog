@@ -9,7 +9,7 @@ tags: art, painting
 
 ![Spruce Needle Silhouette](/static/images/spruce-needle-silhouette.jpg)
 
-This is my 2nd painting. I like how it came out, but almost gave up while painting it because I was comparing it to the sky God painted:
+This is my 2nd painting (painted 2014-01-10). I like how it came out, but almost gave up while painting it because I was comparing it to the sky God painted:
 
 ![Vanilla Sky Sunset Milwaukee WI](/static/images/vanilla-sky-sunset-milwaukee-wi.jpg)
 
