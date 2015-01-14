@@ -11,7 +11,7 @@ tags: art, painting
 
 This is my 2nd painting. I like how it came out, but almost gave up while painting it because I was comparing it to the sky God painted:
 
-![Vanilla Sky Sunset Milwaukee WI](/static/images/vanilla-sky-sunset-milwaukee-wi)
+![Vanilla Sky Sunset Milwaukee WI](/static/images/vanilla-sky-sunset-milwaukee-wi.jpg)
 
 I took this photo of a beautiful "vanilla sky" outside of our home in Milwaukee, WI. It served as my model for the painting (along with other memories of looking at sunsets from beneath the spruce tree).
 
