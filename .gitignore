@@ -40,6 +40,7 @@ blog/output
 # Pelican dev server stuff
 blog/pelican.pid
 blog/srv.pid
+blog/cache
 
 # Ignore IPython Notebook Checkpoints
 .ipynb_checkpoints

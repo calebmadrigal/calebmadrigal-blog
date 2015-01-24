@@ -44,9 +44,10 @@ STATIC_PATHS = ['images', 'code']
 CODE_DIR = 'code'
 NOTEBOOK_DIR = 'code'
 
-STATIC_PATHS = (
-    ('extra/favicon.ico', 'favicon.ico'),
-    ('extra/robots.txt', 'robots.txt'))
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'},
+    'extra/robots.txt': {'path': 'robots.txt'}
+}
 
 # Feed generation
 FEED_ALL_ATOM = 'feeds/all.rss.xml'
