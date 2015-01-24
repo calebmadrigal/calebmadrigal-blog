@@ -44,7 +44,7 @@ STATIC_PATHS = ['images', 'code']
 CODE_DIR = 'code'
 NOTEBOOK_DIR = 'code'
 
-FILES_TO_COPY = (
+STATIC_PATHS = (
     ('extra/favicon.ico', 'favicon.ico'),
     ('extra/robots.txt', 'robots.txt'))
 
@@ -67,7 +67,7 @@ SOCIAL = (('github', 'http://github.com/calebmadrigal'),
 
 ####### Themes and Plugins #######
 THEME = '../pelican-octopress-theme/'
-PLUGIN_PATH = '../pelican-plugins'
+PLUGIN_PATHS = ['../pelican-plugins']
 PLUGINS = ['summary', 'liquid_tags.img', 'liquid_tags.video',
            'liquid_tags.include_code', 'liquid_tags.notebook',
            'liquid_tags.literal']
