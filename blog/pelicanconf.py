@@ -3,7 +3,6 @@
 from __future__ import unicode_literals
 import os.path
 
-
 ####### High-level stuff #######
 AUTHOR = u'Caleb Madrigal'
 SITENAME = u'Caleb Madrigal'
@@ -32,13 +31,11 @@ CATEGORY_SAVE_AS = CATEGORY_URL + 'index.html'
 PAGE_URL = 'pages/{slug}/'
 PAGE_SAVE_AS = 'pages/{slug}/index.html'
 
-
 # Disqus and Google analytics
 DISQUS_SITENAME = 'calebmadrigal'
 GOOGLE_ANALYTICS = 'UA-31212664-1'
 
 # Copying static files
-STATIC_OUT_DIR = ''
 STATIC_PATHS = ['images', 'code']
 
 CODE_DIR = 'code'
@@ -55,12 +52,6 @@ CATEGORY_FEED_ATOM = 'feeds/%s.rss.xml'
 TRANSLATION_FEED_ATOM = None
 FEED_DOMAIN = SITEURL
 FEED_ATOM = 'atom.xml'
-
-# Blogroll
-#LINKS =  (('Pelican', 'http://getpelican.com/'),
-#          ('Python.org', 'http://python.org/'),
-#          ('Jinja2', 'http://jinja.pocoo.org/'),
-#          ('You can modify those links in your config file', '#'),)
 
 # Social widget
 SOCIAL = (('github', 'http://github.com/calebmadrigal'),
