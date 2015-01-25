@@ -10,7 +10,7 @@ tags: javascript, nodejs, expressjs
 
 ## Intro
 
-<img src="/static/images/nodejs-logo.png" style="width:259px; height:141px; float:left; margin-right:15px" />
+<img src="/images/nodejs-logo.png" style="width:259px; height:141px; float:left; margin-right:15px" />
 I first heard of [Node.js](http://nodejs.org/) about 4 years ago. I thought it was a ridiculous idea: using JavaScript as your server-side language! JavaScript always felt to me like an inferior language. Why would you use it unless you absolutely had to!? Now of course, you have to do JavaScript if you are writing code which runs in the browser, but on the server, you can use any language you choose. So why choose JavaScript?
 
 I did choose to use JavaScript/Node.js on my current project. I have now been using it for the last several months, and I am quite impressed! Let me tell you what made me change my mind about Node.js.
@@ -31,7 +31,7 @@ That’s pretty serious! That’s what got me interested.
 
 ## Package manager - NPM
 
-<img src="/static/images/npm-logo.png" style="width:300px; height:150px; float:left; margin-right:15px" />
+<img src="/images/npm-logo.png" style="width:300px; height:150px; float:left; margin-right:15px" />
 So I started looking into Node.js for myself, and found many wonderful things. First, it has a wonderful package management system called [npm](https://www.npmjs.org/). With npm, you can install practically any Node.js package/library by running “npm install package-name”. Node.js also has nice conventions for keeping track of dependencies with a package.json file. With this, you can simply clone a Node.js repo, and run “npm install” to install all of the necessary dependencies.
 
 ## Libraries

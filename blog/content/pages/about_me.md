@@ -7,7 +7,7 @@ title: About Me
 
 Greetings fellow human! I'm Caleb (as you already know). 
 
-![Me at central park](/static/images/caleb_madrigal_in_woods_600px.jpg)
+![Me at central park](/images/caleb_madrigal_in_woods_600px.jpg)
 
 ### Professionally
 

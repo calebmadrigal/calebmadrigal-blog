@@ -24,7 +24,7 @@ This is a guide to set up IPython Notebook on a Server - specifically, on a [Dig
 
 **Go to [http://freedns.afraid.org](http://freedns.afraid.org)** and click **"Setup an account here"** Go through the signup form Click on the activation link they send to your email This will bring you back to their site; Click the link you see there called **"Add a subdomain"** Here is how I filled out the form:
 
-![Create Domain](/static/images/00_create_domain.png)
+![Create Domain](/images/00_create_domain.png)
 
 ### Notes:
 
@@ -39,19 +39,19 @@ For the tutorial, I'm using [Digital Ocean](https://www.digitalocean.com/), sinc
 
 Go to the Droplets tab and hit the button: "Create Droplet" ("Droplet" is how DigitalOcean refers to their VPSs):
 
-![Create Droplet](/static/images/01_create_droplet.png)
+![Create Droplet](/images/01_create_droplet.png)
 
 **Enter the hostname** as the domain name you just set up above
 
-![Set hostname, size](/static/images/02_create_droplet_size.png)
+![Set hostname, size](/images/02_create_droplet_size.png)
 
 Make sure you have **Ubuntu 12.04 x32** selected. You should be able to keep all the other default settings.
 
-![Select Ubuntu OS](/static/images/03_create_droplet_os.png)
+![Select Ubuntu OS](/images/03_create_droplet_os.png)
 
 Click **"Create Droplet"** and then wait for it to be created. When it is done, you should see a screen like this:
 
-![Droplet created](/static/images/04_droplet_created.png)
+![Droplet created](/images/04_droplet_created.png)
 
 **Make a note of the IP Address**
 
@@ -72,7 +72,7 @@ If you are on mac or linux, you can just type the command:
 
 Once you are logged in, you should see a prompt that looks something like this:
 
-![SSH](/static/images/05_ssh.png)
+![SSH](/images/05_ssh.png)
 
 I recommend **changing your password**. To do this, just type `passwd`, and it will prompt you for a new password. If you do this, then you will login with that password from then on (instead of the one that was emailed to you).
 
@@ -91,7 +91,7 @@ Do this on a command-line (**Terminal** if on mac, **cmd** in windows, if you're
 
 You will know if the DNS change has propagated to you if you see your server's IP address in there. When I first tried it, the IP was still out of date:
 
-![Ping domain](/static/images/06_ping.png)
+![Ping domain](/images/06_ping.png)
 
 ## Install IPython Notebook and its dependencies
     
@@ -189,7 +189,7 @@ And finally, you should be able to access your IPython Notebook server from anyw
 
 And it should look like this:
 
-![IPython Notebook running](/static/images/07_signature_check.png)
+![IPython Notebook running](/images/07_signature_check.png)
 
 ## How to check that your certificate is correct
 

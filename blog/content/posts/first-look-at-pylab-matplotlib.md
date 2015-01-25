@@ -34,13 +34,13 @@ I've only played with Matplotlib/Pylab a little bit, but I like what I've seen s
 First, make sure to run `from matplotlib import *` and `from numpy import *`
 
 
-![Gaussian Histogram](/static/images/gaussian_histogram.png)
+![Gaussian Histogram](/images/gaussian_histogram.png)
 
 (I love how there are bell-shaped curves in the array representation of the histogram) :)
 
 ## 2. Plotting a function (y=x^2+10):
 
-![Matplotlib Quadratic](/static/images/matplotlib_quadratic1.png)
+![Matplotlib Quadratic](/images/matplotlib_quadratic1.png)
 
 Also, there is a really good video from PyCon 2012 on Matplotlib: [Plotting with Matplotlib](http://pyvideo.org/video/617/plotting-with-matplotlib).
 

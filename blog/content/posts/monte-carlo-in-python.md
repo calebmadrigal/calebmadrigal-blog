@@ -7,7 +7,7 @@ title: Monte Carlo In Python
 category: math
 tags: math, python, ipython-notebook
 
-![Monte Carlo Estimation of Area](/static/images/MonteCarloEstimationArea.png)
+![Monte Carlo Estimation of Area](/images/MonteCarloEstimationArea.png)
 
 {% notebook ipython_notebook/MonteCarloEstimation.ipynb %}
 

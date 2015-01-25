@@ -33,5 +33,5 @@ And wear your smile.
 * Date written: 5/21/2014
 * Inspiration: Ulysses... I like the word "metempsychosis" - it's been dancing around in my head recently.
 
-![James Joyce by Brian Whelan](/static/images/james_joyce_by_brian_whelan.jpg)
+![James Joyce by Brian Whelan](/images/james_joyce_by_brian_whelan.jpg)
 

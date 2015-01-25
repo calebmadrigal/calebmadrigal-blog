@@ -7,7 +7,7 @@ title: Phantastes
 category: art
 tags: art, literature
 
-<img src="/static/images/phantastes_cover.jpg" style="float:left; margin-right:15px" />
+<img src="/images/phantastes_cover.jpg" style="float:left; margin-right:15px" />
 I recently finished reading [*Phantastes*](http://en.wikipedia.org/wiki/Phantastes) by [George MacDonald](http://en.wikipedia.org/wiki/George_MacDonald) for the 2nd time. The first time I read it, I really liked it. This second time, it became one of my all-time favorites. I've never experience any other work of art which feels so much like being in a dream.
 
 To give you an idea of what it's about, here is the end of the Prelude:

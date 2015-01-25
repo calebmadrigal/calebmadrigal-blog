@@ -36,53 +36,53 @@ So I have made this little **How to Install Ubuntu on VirtualBox in Windows** se
 
 #### Hit New:
 
-![Virtualbox New](/static/images/virtualbox_new.png)
+![Virtualbox New](/images/virtualbox_new.png)
 
 #### Type: Linux, Version: Ubuntu
 
-![Virtualbox Create VM](/static/images/virtualbox_create_vm.png)
+![Virtualbox Create VM](/images/virtualbox_create_vm.png)
 
 #### 2 Gb memory (At least that's what I used on an 8Gb machine)
 
-![Virtualbox Ram](/static/images/virtualbox_ram.png)
+![Virtualbox Ram](/images/virtualbox_ram.png)
 
 
 #### Create a virtual hard drive
 
-![Virtualbox HD](/static/images/virtualbox_hd.png)
+![Virtualbox HD](/images/virtualbox_hd.png)
 
 
 #### Use VID Format
 
-![Virtualbox HD Format](/static/images/virtualbox_hd_format.png)
+![Virtualbox HD Format](/images/virtualbox_hd_format.png)
 
 
 #### Create a Fixed size hard drive - they are faster
 
-![Virtualbox HD Fixed Size](/static/images/virtualbox_hd_fixed_size.png)
+![Virtualbox HD Fixed Size](/images/virtualbox_hd_fixed_size.png)
 
 
 #### I allocated 10 Gb for my virtual hard drive
 
-![Virtualbox HD Size](/static/images/virtualbox_hd_size.png)
+![Virtualbox HD Size](/images/virtualbox_hd_size.png)
 
 
 #### Select the Ubuntu ISO as a CD; Go to Settings -> Storage
 
 
-![Virtualbox CD](/static/images/virtualbox_cd.png)
+![Virtualbox CD](/images/virtualbox_cd.png)
 
 
 #### Click "Choose Disk"
 
 
-![Virtualbox choose disk](/static/images/virtualbox_choose_disk.png)
+![Virtualbox choose disk](/images/virtualbox_choose_disk.png)
 
 
 #### Choose the Ubuntu ISO file
 
 
-![Virtualbox choose disk2](/static/images/virtualbox_choose_disk2.png)
+![Virtualbox choose disk2](/images/virtualbox_choose_disk2.png)
 
 Then finish out the wizard
 
@@ -92,24 +92,24 @@ Then finish out the wizard
 
 #### Open the Settings
 
-![Virtualbox Settings](/static/images/virtualbox_settings.png)
+![Virtualbox Settings](/images/virtualbox_settings.png)
 
 
 #### Add more Video memory and enable 3d acceleration
 
 
-![Virtualbox video memory](/static/images/virtualbox_video_mem.png)
+![Virtualbox video memory](/images/virtualbox_video_mem.png)
 
 
 #### Default network settings worked for me
 
-![Virtualbox networking](/static/images/virtualbox_network.png)
+![Virtualbox networking](/images/virtualbox_network.png)
 
 
 #### Add shared host drive.  Later, this will allow you to mount your entire windows hard drive from Ubuntu
 
 
-![Virtualbox shared folders](/static/images/virtualbox_shared_folders.png)
+![Virtualbox shared folders](/images/virtualbox_shared_folders.png)
 
 
 #### Enable copy/paste between Linux and Windows
@@ -117,7 +117,7 @@ Then finish out the wizard
 
 Go to Settings - General - Advanced and set Shared Clipboard to be "Bidirectional".
 
-![Virtualbox shared clipboard](/static/images/virtualbox_shared_clipboard.png)
+![Virtualbox shared clipboard](/images/virtualbox_shared_clipboard.png)
 
 
 Now exit out of the settings.  Time to install Ubuntu.
@@ -127,13 +127,13 @@ Now exit out of the settings.  Time to install Ubuntu.
 
 #### Click "Start" to start the Virtual Machine
 
-![Virtualbox start](/static/images/virtualbox_start.png)
+![Virtualbox start](/images/virtualbox_start.png)
 
 
 #### The Virtual Machine should see the "bootable" Ubuntu ISO image and run it automatically.  If this works, you will soon see the Ubuntu installation screen
 
 
-![Ubuntu install screen](/static/images/ubuntu_install_screen.png)
+![Ubuntu install screen](/images/ubuntu_install_screen.png)
 
 
 #### Ubuntu Installation Steps
@@ -175,11 +175,11 @@ Xubuntu is a customized XFCE packages.  It is much more lightweight than the def
 * Once that finishes installing, log out
 * Click the Ubuntu button to switch to the Xubuntu window manage:
 
-![Ubuntu change wm](/static/images/ubuntu_change_wm.png)
+![Ubuntu change wm](/images/ubuntu_change_wm.png)
 
 * Select "Xubuntu Session"
 
-![Ubuntu change wm2](/static/images/ubuntu_change_wm2.png)
+![Ubuntu change wm2](/images/ubuntu_change_wm2.png)
 
 * Then log back in, and you should have a Xubuntu desktop
 
@@ -206,13 +206,13 @@ Now I can just run "mountw" from the terminal when I want full access to my Wind
 
 You can, of course, just keep Ubuntu running in the VirtualBox window (which is what I do most of the time):
 
-![Ubuntu in windows](/static/images/ubuntu_in_window.png)
+![Ubuntu in windows](/images/ubuntu_in_window.png)
 
 
 Or, you can also use "Seemless mode" by clicking "Host-L" ("Host" is typically the Right Control key, so Right Control+L), which lets you have mesh Linux and Windows windows right beside each other (without having the containing VirtualBox window).  You can click Right Control+L again to get out of Seamless mode:
 
 
-![Ubuntu in seamless](/static/images/ubuntu_in_seamless.png)
+![Ubuntu in seamless](/images/ubuntu_in_seamless.png)
 
 
 Lastly, if you want to stop using your Virtual Machine for a little while but don't want to turn it off, you can just hit "Right Control+P" to pause it.

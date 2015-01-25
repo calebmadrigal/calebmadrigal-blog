@@ -15,11 +15,11 @@ And Here's what it looks like:
 
 Before you enter your name:
 
-<img src="/static/images/session_example_1.png" style="width:190px; height:90px" />
+<img src="/images/session_example_1.png" style="width:190px; height:90px" />
 
 After you enter your name:
 
-<img src="/static/images/session_example_2.png" style="width:98px; height:72px" />
+<img src="/images/session_example_2.png" style="width:98px; height:72px" />
 
 And here is the code:
 

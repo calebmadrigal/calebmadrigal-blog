@@ -64,7 +64,7 @@ Here's an example:
 
 And this renders as such:
 
-![XSLT Render](/static/images/embedded_xslt_screenshot.png)
+![XSLT Render](/images/embedded_xslt_screenshot.png)
 
 Please note that this doesn't work for Internet Explorer.  For IE, the XSL document must be referenced like this:
 

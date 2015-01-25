@@ -14,6 +14,6 @@ tags: ux
 
 
 Here is an image which shows the eye movement of users on web pages (where red means more time was spent looking there):
-![F Reading Pattern](/static/images/f_reading_pattern_eyetracking.jpg)
+![F Reading Pattern](/images/f_reading_pattern_eyetracking.jpg)
 
 

@@ -25,4 +25,4 @@ And "together we will live forever" in the sky.
 * Date written: 4/14/2014
 * Inspiration: Clint Mansell's *"Together We Will Live Forever"*, Darren Aronofsky's *"The Fountain"*, The Flaming Lips' *"Do You Realize?"*. Every person you know will die. So let's not waste our life - let's live to the fullest, and hope for what is to come.
 
-![Ali Jardine ocean sky](/static/images/the_fountain.jpg)
+![Ali Jardine ocean sky](/images/the_fountain.jpg)

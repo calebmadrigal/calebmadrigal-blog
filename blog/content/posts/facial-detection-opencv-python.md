@@ -9,7 +9,7 @@ tags: python, ai, computer-vision
 
 I was able to get some basic facial detection working in OpenCV with Python.  Here's what it looks like:
 
-![Facial recognition with OpenCV](/static/images/facial_recognition.png)
+![Facial recognition with OpenCV](/images/facial_recognition.png)
 
 And here is the 34-line python script to draw boxes around all detected faces in live video:
 

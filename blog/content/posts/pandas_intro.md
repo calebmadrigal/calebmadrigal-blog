@@ -15,5 +15,5 @@ I've recently been playing with the [pandas](http://pandas.pydata.org/) Python d
 
 And here's a little screenshot of what it looks like in IPython Notebook:
 
-![ipython notebook screenshot](/static/images/pandas_intro_screenshot.png)
+![ipython notebook screenshot](/images/pandas_intro_screenshot.png)
 

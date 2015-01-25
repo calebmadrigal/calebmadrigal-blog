@@ -29,5 +29,5 @@ From the deep ocean skies.
 
 I think [Ali Jardine](https://www.flickr.com/photos/alijardine/11360839004/) was going for the same idea in this beautiful picture:
 
-![Ali Jardine ocean sky](/static/images/ali_jardine_ocean_sky.jpg)
+![Ali Jardine ocean sky](/images/ali_jardine_ocean_sky.jpg)
 

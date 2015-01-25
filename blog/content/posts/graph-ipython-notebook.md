@@ -13,7 +13,7 @@ To run IPython Notebook, use this command: `ipython notebook --pylab inline`
 
 Here's a screenshot:
 
-![IPython Notebook Example](/static/images/ipython_notebook_example.png)
+![IPython Notebook Example](/images/ipython_notebook_example.png)
 
 Here's an embedded IPython Notebook showing a slightly easier way:
 

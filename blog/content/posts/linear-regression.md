@@ -62,7 +62,7 @@ This code takes in a data file with a data point on each line with the x and y s
 
 This code also plots the data points and the resulting best-fit line in [gnuplot](http://en.wikipedia.org/wiki/Gnuplot).  For example:
 
-![Linear Regression](/static/images/linear_regression_example.png)
+![Linear Regression](/images/linear_regression_example.png)
 
 This code, along with helper files, is on [my github repo](https://github.com/calebmadrigal/machine-learning-algorithms/tree/master/univariate_linear_regression).
 
