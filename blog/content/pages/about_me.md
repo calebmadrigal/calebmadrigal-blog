@@ -5,13 +5,13 @@ layout: page
 slug: about-me
 title: About Me
 
-Greetings fellow human! I'm Caleb (as you already know). 
+Greetings! I'm Caleb.
 
 ![Me at central park](/images/caleb_madrigal_in_woods_600px.jpg)
 
 ### Professionally
 
-I'm a Software Consultant in Milwaukee, WI. My most recent development has been in: Python, Flask, Django, Javascript, Node.js, AngularJS, Bootstrap, Objective-C, Java, and C#/.NET.
+I'm a Software Consultant in Milwaukee, WI. My most recent development has been in: Javascript/Node.js/Lodash/Angular, Python/Flask/Django, Bootstrap, .NET/C#, Objective-C, and Java.
 
 Programming started off as a hobby for me (back in junior high), and naturally transformed into a career. I love it! I still enjoy doing interesting side projects; my most recent was a home security and automation system built in Python/Flask/jQuery mobile on the Raspberry Pi.
 
