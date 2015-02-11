@@ -20,8 +20,8 @@ For example, here's how to draw a circle with d3:
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"></script>
 
 <script type="text/javascript">
-  var width = 400;
-  var height = 400;
+  var width = 200;
+  var height = 200;
 
   var x = width/2;
   var y = height/2;
@@ -37,8 +37,8 @@ For example, here's how to draw a circle with d3:
 
 Code:
 
-      var width = 400;
-      var height = 400;
+      var width = 200;
+      var height = 200;
 
       var x = width/2;
       var y = height/2;
