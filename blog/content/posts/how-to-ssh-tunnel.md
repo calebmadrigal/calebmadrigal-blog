@@ -4,8 +4,8 @@ date: 2014-06-27 19:07:00
 layout: post
 slug: how-to-ssh-tunnel
 title: How to SSH Tunnel
-category: networking
-tags: networking, linux, security
+category: hacking
+tags: networking, linux, security, hacking
 
 ## When to use an SSH Tunnel?
 
