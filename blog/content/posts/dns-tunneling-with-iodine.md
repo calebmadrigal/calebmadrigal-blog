@@ -85,7 +85,7 @@ You can also test that you can SSH into your server via the subnet IP, via the D
 
 ## Setup SSH Tunnel inside of DNS Tunnel
 
-Next, we are going to setup an SSH tunnel INSIDE of the DNS Tunnel. This will both setup a SOCKS proxy that will allow you to direct your network traffic through, and will secure your network traffic (at least between you and your server).
+Next, we are going to setup an [SSH tunnel](calebmadrigal.com/how-to-ssh-tunnel/) INSIDE of the DNS Tunnel. This will both setup a SOCKS proxy that will allow you to direct your network traffic through, and will secure your network traffic (at least between you and your server). For more information on SSH Tunneling and how it works, check out [this article](calebmadrigal.com/how-to-ssh-tunnel/).
 
 Run this on your client to setup an SSH Tunnel:
 
@@ -96,4 +96,23 @@ Run this on your client to setup an SSH Tunnel:
 To do this on OSX, go into `Settings` -> `Network`, and then:
 
 ![OSX Socks Setup](/images/osx-socks-setup.png)
+
+## Proof that it's working
+
+When you browse the internet through the tunnel, websites will see your IP address as being your server (your "exit node"), so to test that things are working right, check your with and without the tunneling on:
+
+Without Tunneling:
+
+![IP without tunneling](/images/whats-my-ip-no-tunneling.png)
+
+With Tunneling:
+
+![IP with tunneling](/images/whats-my-ip-with-tunneling.png)
+
+
+Also, if you do a Wireshark capture while browsing the web, you should see a bunch of DNS packets (since all your traffic is tunneling through DNS):
+
+![Wireshark DNS packets](/images/dns-tunnel-wireshark-packets.png)
+
+Now, go enjoy your private and unimpeded internet access right through that corporate or airport firewall!
 
