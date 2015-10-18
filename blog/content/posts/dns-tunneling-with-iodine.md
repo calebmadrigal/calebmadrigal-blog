@@ -13,7 +13,7 @@ DNS Tunneling works by encoding IP protocol inside of DNS packets. [Iodine](http
 
 **Prerequisite: You will need a server with public IP and domain name**
 
-# Setup DNS Tunnel
+## Setup DNS Tunnel
 
 ### Setup DNS Records
 
@@ -83,7 +83,7 @@ You can also test that you can SSH into your server via the subnet IP, via the D
 
 **So at this point, you have a fully-functional DNS Tunnel up and running!**
 
-# Setup SSH Tunnel inside of DNS Tunnel
+## Setup SSH Tunnel inside of DNS Tunnel
 
 Next, we are going to setup an SSH tunnel INSIDE of the DNS Tunnel. This will both setup a SOCKS proxy that will allow you to direct your network traffic through, and will secure your network traffic (at least between you and your server).
 
@@ -91,7 +91,7 @@ Run this on your client to setup an SSH Tunnel:
 
     ssh -D 5000 -N caleb@calebmadrigal.com
 
-# Direct network traffic through tunnel
+## Direct network traffic through tunnel
 
 To do this on OSX, go into `Settings` -> `Network`, and then:
 
