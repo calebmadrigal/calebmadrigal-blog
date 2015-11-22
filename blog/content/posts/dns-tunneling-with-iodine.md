@@ -49,13 +49,24 @@ My client is a Mac, so to install Iodine on Mac, I ran:
     brew install Caskroom/cask/tuntap
     brew install iodine
 
+However, I was unable to get the iodine client on my mac working with the iodine server running on Ubuntu. So I finally decided to just compile iodine on both my server and on my Ubuntu VM. Supposedly, iodine works best with the client and server are the exact same version. So...
+
+Here is how to compile iodine on Ubuntu:
+
+    sudo apt-get install zlib1g-dev
+    git clone https://github.com/yarrick/iodine
+    cd iodine
+    make
+
+This makes `bin/iodine` and `bin/iodined`.
+
 ### Run Iodine server
 
-    sudo iodined -c -f 10.0.0.1 -P secretpassword  tunnel.calebmadrigal.com
+    sudo ./iodined -c -f 10.0.0.1 -P secretpassword  tunnel.calebmadrigal.com
 
 ### Run Iodine client
 
-    sudo iodine -I 50 -f -P secretpassword  tunnel.calebmadrigal.com
+    sudo ./iodine -I 50 -f -P secretpassword  tunnel.calebmadrigal.com
 
 ### Test DNS Tunnel setup
 
@@ -87,11 +98,20 @@ You can also test that you can SSH into your server via the subnet IP, via the D
 
 Next, we are going to setup an [SSH tunnel](calebmadrigal.com/how-to-ssh-tunnel/) INSIDE of the DNS Tunnel. This will both setup a SOCKS proxy that will allow you to direct your network traffic through, and will secure your network traffic (at least between you and your server). For more information on SSH Tunneling and how it works, check out [this article](calebmadrigal.com/how-to-ssh-tunnel/).
 
-Run this on your client to setup an SSH Tunnel:
+Run (something like) this on your client to setup an SSH Tunnel:
 
-    ssh -D 5000 -N caleb@calebmadrigal.com
+    ssh -D 5000 -N caleb@10.0.0.1
 
 ## Direct network traffic through tunnel
+
+The simplest test is to use `curl` to download something through your SOCKS proxy like this:
+
+    curl --socks5-hostname 127.0.0.1:5000 http://httpbin.org/ip
+
+You can verify that the IP it is returning is the IP of your ssh server.
+
+
+Alternatively, you can set the proxy for your whole computer like this...
 
 To do this on OSX, go into `Settings` -> `Network`, and then:
 
