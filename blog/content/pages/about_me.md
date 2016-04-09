@@ -1,21 +1,19 @@
 author: Caleb Madrigal
 comments: false
-date: 2012-01-02 20:20:05
+date: 2016-04-09 11:40:00
 layout: page
 slug: about-me
 title: About Me
-
-Greetings! I'm Caleb.
 
 ![Me at central park](/images/caleb_madrigal_in_woods_600px.jpg)
 
 ### Professionally
 
-I'm a Software Consultant in Milwaukee, WI. My most recent development has been in: Javascript/Node.js/Lodash/Angular, Python/Flask/Django, Bootstrap, .NET/C#, Objective-C, and Java.
+I'm a Security Software Engineer based out of Milwaukee, WI. My most recent development has been in: Python, C, Javascript/Node.js/Lodash.
 
-Programming started off as a hobby for me (back in junior high), and naturally transformed into a career. I love it! I still enjoy doing interesting side projects; my most recent was a home security and automation system built in Python/Flask/jQuery mobile on the Raspberry Pi.
+On the side, I've been hacking around with [Software-Defined Radio](https://en.wikipedia.org/wiki/Software-defined_radio) and [IoT](https://en.wikipedia.org/wiki/Internet_of_Things) stuff recently.
 
-I also occasionally speak at software conferences like [OSCON](http://www.oscon.com/oscon2013/public/schedule/detail/28946) and [Barcamp](https://barcampmilwaukee.org/).
+I also occasionally speak at software conferences like [OSCON](http://www.oscon.com/oscon2013/public/schedule/detail/28946), [Cyphercon](http://cyphercon.com/), and [Barcamp](https://barcampmilwaukee.org/).
 
 Social network links:
 

@@ -6,7 +6,7 @@ import os.path
 ####### High-level stuff #######
 AUTHOR = u'Caleb Madrigal'
 SITENAME = u'Caleb Madrigal'
-SITESUBTITLE = u'Programming and Poetry'
+SITESUBTITLE = u'Programming, Hacking, Math, and Art'
 SITEURL = u'http://calebmadrigal.com'
 TIMEZONE = 'US/Central'
 DEFAULT_LANG = u'en'
