@@ -34,6 +34,7 @@ Total cost of parts: ~$115
 I wrote the controller software in Python (with ZeroMQ, Flask, Rpi.GPIO, and jQuery Mobile): <https://github.com/calebmadrigal/rpi-home-automation>.
 
 It's made of up 3 components:
+
 * [Web Controller](https://github.com/calebmadrigal/rpi-home-automation/blob/master/web_controller.py)
     - This serves a jQuery Mobile front end which allows enabling/disabling the alarm system, and turning on/off outlets.
     - When the user takes an action, the Web Controller sends a message to the Master Controller via ZeroMQ.
@@ -127,5 +128,6 @@ In the 3 years since I built this, some really nice, low-cost home automation/se
 For me, this project was a very cool exercise in learning how to control the physical world with code. I loved the feeling of nobody holding my hand, giving me an API, etc. It's a cool feeling hacking hardware into something which I could control with Python code! And it worked out well: 3 years after building it, it's still running as I write this.
 
 Key take-away:
+
 * Most functions of electronic devices are ultimately controlled by closing some simple contact. Sometimes these are controlled by a tactile switch, sometimes by other things. Either way, it's pretty easy to hack them in a way where you can control them with a computer by using a transistor or relay.
 
