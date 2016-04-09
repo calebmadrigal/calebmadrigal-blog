@@ -11,7 +11,6 @@ tags: iot, hacking, security, linux, raspberrypi
 
 ![Raspberry Pi Home Security System](/images/rpi_security_system/rpi_security_system_complete.jpg)
 
-And here is the Python code that controls it: <https://github.com/calebmadrigal/rpi-home-automation>
 
 ### What it does
 
@@ -32,11 +31,17 @@ Total cost of parts: ~$115
 
 ### Software used
 
-* Python
-* ZeroMQ
-* Flask
-* Rpi.GPIO
-* jQuery Mobile
+I wrote the controller software in Python (with ZeroMQ, Flask, Rpi.GPIO, and jQuery Mobile): <https://github.com/calebmadrigal/rpi-home-automation>.
+
+It's made of up 3 components:
+* [Web Controller](https://github.com/calebmadrigal/rpi-home-automation/blob/master/web_controller.py)
+    - This serves a jQuery Mobile front end which allows enabling/disabling the alarm system, and turning on/off outlets.
+    - When the user takes an action, the Web Controller sends a message to the Master Controller via ZeroMQ.
+* [Master Controller](https://github.com/calebmadrigal/rpi-home-automation/blob/master/master_controller.py)
+    - The Master Controller handles turning on/off outlets, listening for input from the door sensor, sounding the alarm (if the door sensor is tripped and alarm mode is enabled), and sending notifications (via email).
+    - Whenever an outlet needs to be turned on, the Master Controller sends a message to the GPIO Helper via ZeroMQ.
+* [GPIO Helper](https://github.com/calebmadrigal/rpi-home-automation/blob/master/gpio_helper.py)
+    - The GPIO Helper is a process whose sole responsibility is turning outlets on or off. As it turns out, the remote controller must have its switches "pressed" for about 1 second, so the GPIO helper will turn the correct GPIO pin ON, sleep for a second, and then turn it back off.
 
 ### Development pictures
 
@@ -92,13 +97,25 @@ Testing out reading the photoresistor as an input to the Raspberry Pi
 
 ![Photoresistor input test](/images/rpi_security_system/door_sensor_02.jpg)
 
+Here's a video of it:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eReBJl7te-A" frameborder="0" allowfullscreen></iframe>
+
 And here, you can see how it looked to hook up the photoresistor (taped to the door sensor outlet) hooked up to a Raspberry Pi GPIO pin. Another (output) GPIO pin is hooked up a buzzer.
 
 ![Door sensor to raspberry pi](/images/rpi_security_system/door_sensor_03.jpg)
 
+Failed test video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UOkjU6mefhI" frameborder="0" allowfullscreen></iframe>
+
+Successful door sensor test video:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/gmZ8WKGPcrA" frameborder="0" allowfullscreen></iframe>
+
 Here's the diagram of how the door sensor was hooked up to the Raspberry Pi:
 
-![Door sensor diagram](/images/rpi_security_system/rpi_diagram_01.jpg)
+![Door sensor diagram](/images/rpi_security_system/door_trigger_diagram.jpg)
 
 And again, this is what the finished product looked like:
 
@@ -108,4 +125,7 @@ And again, this is what the finished product looked like:
 In the 3 years since I built this, some really nice, low-cost home automation/security systems have come out like [Wink](http://www.wink.com/) and [SmartThings](https://www.smartthings.com/). If I wanted a home automation/security system today, I probably wouldn't take this approach; but at the time, I wanted a low-cost system, and I wanted something cool to do with a Raspberry Pi.
 
 For me, this project was a very cool exercise in learning how to control the physical world with code. I loved the feeling of nobody holding my hand, giving me an API, etc. It's a cool feeling hacking hardware into something which I could control with Python code! And it worked out well: 3 years after building it, it's still running as I write this.
+
+Key take-away:
+* Most functions of electronic devices are ultimately controlled by closing some simple contact. Sometimes these are controlled by a tactile switch, sometimes by other things. Either way, it's pretty easy to hack them in a way where you can control them with a computer by using a transistor or relay.
 
