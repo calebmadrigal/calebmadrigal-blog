@@ -25,7 +25,7 @@ Yet hidden inside.
 
 To walk through life
 Not truly alive
-And to leave in the night
+And to pass in the night
 With an unfelt "goodbye".
 </pre>
 
