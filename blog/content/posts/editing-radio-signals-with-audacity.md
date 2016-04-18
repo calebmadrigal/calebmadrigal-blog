@@ -27,6 +27,8 @@ A few things to note about this flowgraph:
 
 I recorded the signal sent by the remote control for both ON and OFF for each of the 3 outlets (so a total of 6 signals).
 
+## Viewing radio signals in Audacity
+
 The next step was to import the signals into Audacity like this:
 
 Go to `File` -> `Import` -> `Raw Data...`:
@@ -68,4 +70,26 @@ Eventually, analyzed all 6 signals (3 on signals and 3 off signals), and found t
 
 Pretty intersting. It looks very possible to brute force :)
 
+
+## Editing and exporting radio signals with Audacity
+
+Now, if you want to edit radio signals, that works well in Audacity as well. The only thing I've found this useful for is isolating the signal I'm interested in and saving that to a separate file (like for transmitting later). Here's how to do it:
+
+Select the signal you want to isolate:
+
+![Audacity save signal 1](/images/editing_radio_signals_with_audacity/audacity_save_signal1.png)
+
+Select the format, "Other uncompressed files", and then click the "Options" button...
+
+![Audacity save signal 2](/images/editing_radio_signals_with_audacity/audacity_save_signal2.png)
+
+Select `Header` to be `Raw (header-less)` and `Encoding` to be `32 bit float`:
+
+![Audacity save signal 3](/images/editing_radio_signals_with_audacity/audacity_save_signal3.png)
+
+And finally, don't set any metadata. And click Ok:
+
+![Audacity save signal 4](/images/editing_radio_signals_with_audacity/audacity_save_signal4.png)
+
+The file this outputs can then be used as an input to a Gnu Radio Companion flowgraph.
 
