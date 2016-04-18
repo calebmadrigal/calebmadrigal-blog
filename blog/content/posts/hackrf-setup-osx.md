@@ -5,7 +5,7 @@ layout: post
 slug: hackrf-setup-osx-2016
 title: HackRF Setup OSX 2016
 category: hacking
-tags: hacking, security, sdr
+tags: hacking, security, radio, sdr
 
 These are some pretty raw notes I took while installing the software for using a HackRF on OSX. This is the software I installed:
 
