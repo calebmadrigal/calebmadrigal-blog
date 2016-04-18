@@ -27,7 +27,7 @@ Here is what the waterfall graph of the recording looks like. This is first the 
 
 ![Unlock and lock signals waterfall](/images/hackrf_replay_attack_jeep/unlock_lock_signals_waterfall.png)
 
-Now I could simply replay this recording in order to execute a replay attack. But wanted to explore these signals in a bit more detail. So I decided to try to trim them down using [Audacity](http://www.audacityteam.org/). Though Audacity is primarily intended as sound editing software, it can also be used for editing the wave forms of radio signals (which is pretty awesome! Waves are just waves, whether transmitted by sound or radio).
+Now I could simply replay this recording in order to execute a replay attack. But wanted to explore these signals in a bit more detail. So I decided to try to trim them down using [Audacity](http://www.audacityteam.org/). Though Audacity is primarily intended as sound editing software, it can also be used for editing the wave forms of radio signals (which is pretty awesome! Waves are just waves, whether transmitted by sound or radio). I won't go into too many details here, but you can learn more about importing/editing/exporting radio signals in Audacity here: <http://calebmadrigal.com/editing-radio-signals-with-audacity/>.
 
 Here is what the "unlock" and "lock" signals look like in Audacity:
 
