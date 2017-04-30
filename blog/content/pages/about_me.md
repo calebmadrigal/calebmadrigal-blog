@@ -5,6 +5,8 @@ layout: page
 slug: about-me
 title: About Me
 
+<img src="/images/my_head_edinburgh.jpg" style="float:right; width: 266px; height: 303px;">
+
 **Professionally**, I work at Mandiant/FireEye writing awesome Incident Response software. A lot of my recent work has been in python, node, and C, and has been running on Linux, OS X, and Windows. Recently, I've done some interesting work in the areas of networking, cryptography, linux packaging, as well as various security-related things.
 
 **Recreationally**, I have varied interests, among which are mathing, hacking, reading (mostly surrealism, artsy classics, sci-fi), and a few sports (rock climbing, biking, ultimate, snowboarding). Recently, I've had a lot of fun with waves - both sound waves and radio waves. I've done a good bit of wireless hacking, particularly in the IoT realm. I've also done a little writing. I don't play video games much these days - instead, I've kind of come to see life as a game, and I enjoy "leveling-up" by learning and doing new and interesting things.
@@ -19,4 +21,3 @@ Social network links:
 - [My LinkedIn page](http://www.linkedin.com/pub/caleb-madrigal/40/489/2b8)
 - [Twitter: @caleb_madrigal](https://twitter.com/caleb_madrigal)
 
-![Me in Edinburgh](/images/my_head_edinburgh.jpg)
