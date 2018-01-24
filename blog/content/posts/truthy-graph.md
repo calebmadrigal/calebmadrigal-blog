@@ -7,9 +7,9 @@ title: Truthy Graph
 category: math
 tags: math
 
-One time, I was looking at a graph, and the thought occurred to me, "this graph shows where the two sides of this equation are exactly equal, but what would a graph showed also where they were *almost* the same?", so I write a little graphing web app: **<https://truthygraph.github.io/>**.
+One time, I was looking at a graph, and the thought occurred to me, "this graph shows where the two sides of this equation are exactly equal, but what if a graph showed also where they were *almost* the same?", so I wrote a little graphing web app: **<https://truthygraph.github.io/>**.
 
-I called it "Truthy Graph", since it shows where the 2 sides of the equation are true, or near true. I think some interesting shapes show up. Here's a few screenshots:
+I called it "Truthy Graph", since it shows where the 2 sides of the equation are nearly true. I think some interesting shapes show up. Here's a few screenshots:
 
 ![sin(3x)](/images/truthygraph_sin.png)
 
