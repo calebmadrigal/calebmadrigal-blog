@@ -7,7 +7,7 @@ import os.path
 AUTHOR = u'Caleb Madrigal'
 SITENAME = u'Caleb Madrigal'
 SITESUBTITLE = u'Programming, Hacking, Math, and Art'
-SITEURL = u'http://calebmadrigal.com'
+SITEURL = u'https://calebmadrigal.com'
 TIMEZONE = 'US/Central'
 DEFAULT_LANG = u'en'
 SUMMARY_MAX_LENGTH = 128
@@ -54,8 +54,8 @@ FEED_DOMAIN = SITEURL
 FEED_ATOM = 'atom.xml'
 
 # Social widget
-SOCIAL = (('github', 'http://github.com/calebmadrigal'),
-          ('linkedin', 'http://www.linkedin.com/pub/caleb-madrigal/40/489/2b8/'))
+SOCIAL = (('github', 'https://github.com/calebmadrigal'),
+          ('linkedin', 'https://www.linkedin.com/pub/caleb-madrigal/40/489/2b8/'))
 
 ####### Themes and Plugins #######
 THEME = '../pelican-octopress-theme/'
