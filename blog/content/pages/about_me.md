@@ -1,23 +1,43 @@
 author: Caleb Madrigal
 comments: false
-date: 2017-04-29 10:20:00
+date: 2021-02-19 16:30:00
 layout: page
 slug: about-me
 title: About Me
 
-<img src="/images/my_head_edinburgh.jpg" style="float:right; width: 266px; height: 303px;">
+<img src="/images/mandelbrot_face_profile_square_512.png" style="float:right; width: 512px; height: 512px;">
 
-**Professionally**, I work at Mandiant/FireEye writing awesome Incident Response software. A lot of my recent work has been in python, node, and C, and has been running on Linux, OS X, and Windows. Recently, I've done some interesting work in the areas of networking, cryptography, linux packaging, as well as various security-related things.
+Since this blog is mostly software-focused, I'll focus on software first. I've been writing software for over 20 years. I specialize in math-intensive software, such as [machine learning/AI](https://madconsulting.ai), [radio hacking](https://www.youtube.com/watch?v=qhuhJ9Oe9vA), and [doing art with math](https://gods.art).
 
-**Recreationally**, I have varied interests, among which are mathing, hacking, reading (mostly surrealism, artsy classics, sci-fi), and a few sports (rock climbing, biking, ultimate, snowboarding). Recently, I've had a lot of fun with waves - both sound waves and radio waves. I've done a good bit of wireless hacking, particularly in the IoT realm. I've also done a little writing. I don't play video games much these days - instead, I've kind of come to see life as a game, and I enjoy "leveling-up" by learning and doing new and interesting things.
+I've spoken at a good number of hacker conferences, such as: [DEF CON](https://www.youtube.com/watch?v=qhuhJ9Oe9vA), [Thotcon](https://www.thotcon.org/), [Cyphercon](https://cyphercon.com/), [Deep Sec](https://deepsec.net/), and [OSCON](https://www.oreilly.com/conferences/oscon.html).
 
-**Artistically**, I love surrealism. Examples of artists I like are Haruki Murakami, David Lynch, and Salvador Dali. I've tried to figure out why I love surrealism (yes, granted, "It's surrealism! The reason is unimportant!")... but I think I like the feeling of being in a dream, and the fractured sense of reality it portrays... I feel like life is not the most outward shell of reality, and so transforming daily life into a dreamworld seems to be revealing truth.
+~~~
 
-**Ontologically/Spiritually**, I think the best way to describe myself is as a "Christian Mystic". By this, I don't mean I only care about my own personal spiritual experiences... instead, I use the term to delineate myself from the mindset that seems prevalent in modern western christianity, which is to think it's got everything figured out, to think everything is clear-cut black and white, and whose focus is too heavily on academic "correctness" rather than embracing the mystical nature of spirituality. I believe God is mysterious and beautiful and complex. I think the core concepts like "love your neighbor" are (like the Mandelbrot equation) simple, but give rise to beautiful complexities when lived out.
+![Mad Consulting logo](/images/madconsulting_logo1.png)
 
-Social network links:
+My brother and I run a consulting company called [Mad Consuting](https://madconsulting.ai). We specialize in: 
 
+* **1)** helping companies use machine learning
+* **2)** mobile apps - we wrote our own app platform which we've used to launch a couple apps
+* **3)** custom software - with a focus on math-intensive and cybersecurity-related applications.
+
+Feel free to reach out if you've got a project you think we could help on.
+
+~~~
+
+One of the things I do for fun is algorithmic art - it's basically like acrylic pour paintings, except with equations and algorithms instead of paint. My art website is <https://gods.art>.
+
+<video width="1000" height="563" autoplay loop controls>
+  <source src="https://godsart.sfo2.digitaloceanspaces.com/pub/videos/strange_faces.mp4" type="video/mp4">
+</video>
+
+I believe in the God of Love. I believe in asking hard questions and pursuing the answers fearlessly. I am. <3
+
+Internet links:
+
+- [Mad Consulting (my consulting company)](https://madconsulting.ai)
+- [gods.art](https://gods.art)
 - [My github page](https://github.com/calebmadrigal)
-- [My LinkedIn page](http://www.linkedin.com/pub/caleb-madrigal/40/489/2b8)
+- [My LinkedIn page](https://www.linkedin.com/in/calebmadrigal/)
 - [Twitter: @caleb_madrigal](https://twitter.com/caleb_madrigal)
 
