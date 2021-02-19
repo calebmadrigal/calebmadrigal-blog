@@ -14,6 +14,9 @@ I've spoken at a good number of hacker conferences, such as: [DEF CON](https://w
 
 <br />
 <br />
+<br />
+<br />
+<br />
 <img src="/images/madconsulting_logo1.png" width="400px">
 
 My brother and I run a consulting company called [Mad Consuting](https://madconsulting.ai). We specialize in: 
