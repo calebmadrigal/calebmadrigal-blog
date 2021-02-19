@@ -5,7 +5,7 @@ layout: page
 slug: consulting
 title: Consulting
 
-![Mad Consulting logo](/images/madconsulting_logo1.png)
+<img src="/images/madconsulting_logo1.png" width="400px">
 
 My brother and I run a consulting company called [Mad Consuting](https://madconsulting.ai). We specialize in:
 
