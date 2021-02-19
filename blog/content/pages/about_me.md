@@ -5,14 +5,15 @@ layout: page
 slug: about-me
 title: About Me
 
-<img src="/images/mandelbrot_face_profile_square_512.png" style="float:right; width: 350px; height: 350px;">
+<img src="/images/mandelbrot_face_profile_square_512.png" style="float:right; width: 300px; height: 300px;">
 
 Since this blog is mostly software-focused, I'll focus on software first. I've been writing software for over 20 years. I specialize in math-intensive software, such as [machine learning/AI](https://madconsulting.ai), [radio hacking](https://www.youtube.com/watch?v=qhuhJ9Oe9vA), and [doing art with math](https://gods.art).
 
 I've spoken at a good number of hacker conferences, such as: [DEF CON](https://www.youtube.com/watch?v=qhuhJ9Oe9vA), [Thotcon](https://www.thotcon.org/), [Cyphercon](https://cyphercon.com/), [Deep Sec](https://deepsec.net/), and [OSCON](https://www.oreilly.com/conferences/oscon.html).
 
----
 
+<br />
+<br />
 <img src="/images/madconsulting_logo1.png" width="400px">
 
 My brother and I run a consulting company called [Mad Consuting](https://madconsulting.ai). We specialize in: 
