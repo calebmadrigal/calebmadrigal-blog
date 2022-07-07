@@ -43,7 +43,7 @@ python-apt==0.9.3.5ubuntu1
 python-dateutil==1.5
 python-debian==0.1.21-nmu2ubuntu2
 pytz==2012c
-requests==2.2.1
+requests==2.20.0
 scikit-learn==0.15.2
 scipy==0.13.3
 simplejson==3.3.1
