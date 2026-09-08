@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Caleb Madrigal</title><link href="https://calebmadrigal.com/" rel="alternate"></link><link href="https://calebmadrigal.com/feeds/ux.atom.xml" rel="self"></link><id>https://calebmadrigal.com/</id><updated>2012-06-22T16:07:57-05:00</updated><entry><title>Eye movement on web pages</title><link href="https://calebmadrigal.com/eye-movement-web-pages/" rel="alternate"></link><updated>2012-06-22T16:07:57-05:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2012-06-22:eye-movement-web-pages/</id><summary type="html">&lt;ul&gt;
+&lt;li&gt;I've always preferred bulleted lists (and the like) over flat paragraph formats&lt;/li&gt;
+&lt;li&gt;I believe they can be visually parsed much faster than paragraphs&lt;/li&gt;
+&lt;li&gt;Now I have &lt;strong&gt;evidence&lt;/strong&gt;: &lt;a href="http://www.useit.com/alertbox/reading_pattern.html"&gt;F-shaped reading pattern study&lt;/a&gt; :)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here is an image which shows the eye movement of users on web pages (where red means more time was spent looking there):
+&lt;img alt="F Reading Pattern" src="/images/f_reading_pattern_eyetracking.jpg" /&gt;&lt;/p&gt;</summary><category term="ux"></category></entry></feed>

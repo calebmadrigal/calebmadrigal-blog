@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Caleb Madrigal</title><link href="https://calebmadrigal.com/" rel="alternate"></link><link href="https://calebmadrigal.com/feeds/programming.atom.xml" rel="self"></link><id>https://calebmadrigal.com/</id><updated>2012-04-30T20:05:16-05:00</updated><entry><title>Premature generalization is the new premature optimization</title><link href="https://calebmadrigal.com/premature-generalization-premature-optimization/" rel="alternate"></link><updated>2012-04-30T20:05:16-05:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2012-04-30:premature-generalization-premature-optimization/</id><summary type="html">&lt;p&gt;A &lt;a href="http://www.wisdomandwonder.com/"&gt;co-worker&lt;/a&gt; was just showing me a situation where another developer had written a validation framework which was only used on 2 pages.  I've seen this pattern again and again, and I've put a phrase to the thought:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;Premature generalization is the new premature optimization.
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And it, too, is evil.&lt;/p&gt;</summary></entry><entry><title>Embedding an XSLT in an XML document</title><link href="https://calebmadrigal.com/embedding-xslt-xml-document/" rel="alternate"></link><updated>2012-04-11T19:36:30-05:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2012-04-11:embedding-xslt-xml-document/</id><summary type="html">&lt;p&gt;Today, I had this XML document which I was wanting to make viewable in a browser.  My plan was to run the XML document through an XSLT engine to transform it into an HTML document (which could then be opened in a browser).&lt;/p&gt;
+&lt;p&gt;Instead, I found that I could just embed the XSLT directly in the XML document.  Then, when this file is opened in a browser, the XSLT executes and spits out HTML, which is then rendered into the browser window.  This is great because I now have the original XML file (which we wanted to keep further analysis purposes) which can also be rendered nicely in a browser.&lt;/p&gt;
+&lt;p&gt;Here's an example:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;ISO-8859-1&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;?xml-stylesheet type=&amp;quot;text/xml&amp;quot; href=&amp;quot;#stylesheet&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;!DOCTYPE catelog [&lt;/span&gt;
+&lt;span class="cp"&gt;&amp;lt;!ATTLIST xsl:stylesheet&lt;/span&gt;
+&lt;span class="cp"&gt;  id    ID  #REQUIRED&amp;gt;&lt;/span&gt;
+]&amp;gt;
+&lt;span class="nt"&gt;&amp;lt;catalog&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;&amp;lt;xsl:stylesheet&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;version=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1.0&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;xmlns:xsl=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://www.w3.org/1999/XSL/Transform&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;&amp;lt;xsl:template&lt;/span&gt; &lt;span class="na"&gt;match=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;html&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;h2&amp;gt;&lt;/span&gt;My CD Collection&lt;span class="nt"&gt;&amp;lt;/h2&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;table&lt;/span&gt; &lt;span class="na"&gt;border=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;1&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;tr&lt;/span&gt; &lt;span class="na"&gt;bgcolor=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;#9acd32&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;th&amp;gt;&lt;/span&gt;Title&lt;span class="nt"&gt;&amp;lt;/th&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;th&amp;gt;&lt;/span&gt;Artist&lt;span class="nt"&gt;&amp;lt;/th&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+      &lt;span class="k"&gt;&amp;lt;xsl:for-each&lt;/span&gt; &lt;span class="na"&gt;select=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;catalog/cd&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;tr&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;&amp;lt;xsl:value-of&lt;/span&gt; &lt;span class="na"&gt;select=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;title&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;td&amp;gt;&lt;/span&gt;&lt;span class="k"&gt;&amp;lt;xsl:value-of&lt;/span&gt; &lt;span class="na"&gt;select=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;artist&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;/&amp;gt;&amp;lt;/td&amp;gt;&lt;/span&gt;
+      &lt;span class="nt"&gt;&amp;lt;/tr&amp;gt;&lt;/span&gt;
+      &lt;span class="k"&gt;&amp;lt;/xsl:for-each&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/table&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
+  &lt;span class="nt"&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;&amp;lt;/xsl:template&amp;gt;&lt;/span&gt;
+&lt;span class="k"&gt;&amp;lt;/xsl:stylesheet&amp;gt;&lt;/span&gt;
+
+    &lt;span class="nt"&gt;&amp;lt;cd&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Empire Burlesque&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;artist&amp;gt;&lt;/span&gt;Bob Dylan&lt;span class="nt"&gt;&amp;lt;/artist&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;country&amp;gt;&lt;/span&gt;USA&lt;span class="nt"&gt;&amp;lt;/country&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;company&amp;gt;&lt;/span&gt;Columbia&lt;span class="nt"&gt;&amp;lt;/company&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;price&amp;gt;&lt;/span&gt;10.90&lt;span class="nt"&gt;&amp;lt;/price&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;year&amp;gt;&lt;/span&gt;1985&lt;span class="nt"&gt;&amp;lt;/year&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/cd&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;cd&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;title&amp;gt;&lt;/span&gt;Hide your heart&lt;span class="nt"&gt;&amp;lt;/title&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;artist&amp;gt;&lt;/span&gt;Bonnie Tyler&lt;span class="nt"&gt;&amp;lt;/artist&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;country&amp;gt;&lt;/span&gt;UK&lt;span class="nt"&gt;&amp;lt;/country&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;company&amp;gt;&lt;/span&gt;CBS Records&lt;span class="nt"&gt;&amp;lt;/company&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;price&amp;gt;&lt;/span&gt;9.90&lt;span class="nt"&gt;&amp;lt;/price&amp;gt;&lt;/span&gt;
+        &lt;span class="nt"&gt;&amp;lt;year&amp;gt;&lt;/span&gt;1988&lt;span class="nt"&gt;&amp;lt;/year&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;/cd&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/catalog&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And this renders as such:&lt;/p&gt;
+&lt;p&gt;&lt;img alt="XSLT Render" src="/images/embedded_xslt_screenshot.png" /&gt;&lt;/p&gt;
+&lt;p&gt;Please note that this doesn't work for Internet Explorer.  For IE, the XSL document must be referenced like this:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="cp"&gt;&amp;lt;?xml-stylesheet type=&amp;quot;text/xml&amp;quot; href=&amp;quot;report.xsl&amp;quot;?&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="html"></category></entry></feed>

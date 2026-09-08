@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Caleb Madrigal</title><link href="https://calebmadrigal.com/" rel="alternate"></link><link href="https://calebmadrigal.com/feeds/powershell.atom.xml" rel="self"></link><id>https://calebmadrigal.com/</id><updated>2012-01-02T20:21:30-06:00</updated><entry><title>Periods in Powershell</title><link href="https://calebmadrigal.com/periods-in-powershell/" rel="alternate"></link><updated>2012-01-02T20:21:30-06:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2012-01-02:periods-in-powershell/</id><summary type="html">&lt;p&gt;For running most commands, powershell and CMD work the same. One big difference I've found is that, when you use periods (&lt;code&gt;.&lt;/code&gt;) in a command, they must be surrounded by quotation marks. For instance, this won't work:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mvn clean install -U -Docns.web.dynamic.content.version=2.6.0
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;But this will work:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;mvn clean install -U &amp;quot;-Docns.web.dynamic.content.version=2.6.0&amp;quot;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="powershell"></category></entry></feed>

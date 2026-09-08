@@ -35,7 +35,7 @@ nosetests.xml
 .pydevproject
 
 # Rendered html
-blog/output
+#blog/output
 
 # Pelican dev server stuff
 blog/pelican.pid

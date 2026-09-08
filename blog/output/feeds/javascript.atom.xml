@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Caleb Madrigal</title><link href="https://calebmadrigal.com/" rel="alternate"></link><link href="https://calebmadrigal.com/feeds/javascript.atom.xml" rel="self"></link><id>https://calebmadrigal.com/</id><updated>2015-02-11T11:35:00-06:00</updated><entry><title>Simple D3 demos</title><link href="https://calebmadrigal.com/simple-d3-demos/" rel="alternate"></link><updated>2015-02-11T11:35:00-06:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2015-02-11:simple-d3-demos/</id><summary type="html">&lt;p&gt;I've been playing with &lt;a href="http://d3js.org/"&gt;d3&lt;/a&gt; recently, and it awesome! I'm especially amazed by the ease of animating &lt;a href="https://github.com/mbostock/d3/wiki/Transitions"&gt;transitions&lt;/a&gt; with it.&lt;/p&gt;
+&lt;p&gt;There are plenty of &lt;a href="https://github.com/mbostock/d3/wiki/Gallery"&gt;amazing d3 demos&lt;/a&gt; out there, but I wanted to write some simpler ones to help me understand the basics of d3. You can find them here:&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://calebmadrigal.github.io/d3-demos/"&gt;http://calebmadrigal.github.io/d3-demos/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;For example, here's how to draw a circle with d3:&lt;/p&gt;
+&lt;div id="d3-simple-circle"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.3/d3.min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript"&gt;
+  var width = 200;
+  var height = 200;
+
+  var x = width/2;
+  var y = height/2;
+  var radius = 100;
+  var fill = '#F012BE';
+
+  var svg = d3.select("#d3-simple-circle").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+    .append('circle')
+    .attr({ r: radius, cx: x, cy: y, fill: fill});
+&lt;/script&gt;
+
+&lt;p&gt;Code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;  &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;width&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;200&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+  &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;height&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;200&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+  &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;width&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+  &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;height&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="nt"&gt;2&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+  &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;100&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+  &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;fill&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;#F012BE&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;;&lt;/span&gt;
+
+  &lt;span class="nt"&gt;var&lt;/span&gt; &lt;span class="nt"&gt;svg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nt"&gt;d3&lt;/span&gt;&lt;span class="nc"&gt;.select&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#d3-simple-circle&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;&lt;span class="nc"&gt;.append&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="nc"&gt;.attr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;width&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;width&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="nc"&gt;.attr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;height&amp;quot;&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="nt"&gt;height&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="nc"&gt;.append&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;)&lt;/span&gt;
+    &lt;span class="nc"&gt;.attr&lt;/span&gt;&lt;span class="o"&gt;(&lt;/span&gt;&lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="n"&gt;r&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;radius&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cx&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;cy&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="o"&gt;,&lt;/span&gt; &lt;span class="n"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="n"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;}&lt;/span&gt;&lt;span class="o"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;And here's one of the cooler-looking ones:&lt;/p&gt;
+&lt;div id="dancing-sin-graph"&gt;&lt;/div&gt;
+
+&lt;script type="text/javascript"&gt;
+  var width = 700;
+  var height = 500;
+
+  var linspace = function(start, stop, num_samples) {
+    return d3.range(start, stop * (num_samples / (stop-start)))
+      .map(function (n) { return n / (num_samples / (stop-start)); });
+  };
+
+  var direction = 1;
+  var x = linspace(0, 20, 500);
+  var y = x.map(function (i) { return ((height/2)-50) * direction * Math.sin(i); });
+
+  var x_step = width / x.length;
+  var y_middle = height / 2;
+
+  var radius = 100;
+  var fill = '#F012BE';
+
+  var sin_svg = d3.select("#dancing-sin-graph").append("svg")
+    .attr("width", width)
+    .attr("height", height);
+
+  sin_svg.selectAll('circle')
+    .data(y)
+    .enter()
+    .append('circle')
+    .attr({r: 2, fill: fill})
+    .attr('cx', function (d, i) {
+      return x_step * i;
+    })
+    .attr('cy', function (d, i) {
+      return y_middle - d;
+    });
+
+  function invert() {
+    direction = direction * -1;
+    y = x.map(function (i) { return ((height/2)-50) * direction * Math.sin(i); });
+
+    d3.select("#dancing-sin-graph").selectAll('circle')
+      .data(y)
+      .transition()
+      .duration(1000)
+      .attr({r: 2, fill: fill})
+      .attr('cx', function (d, i) {
+        return x_step * i;
+      })
+      .attr('cy', function (d, i) {
+        return y_middle - d;
+      });
+  }
+
+  // Make the interval just less than the transition duration so motion never stops
+  setInterval(invert, 900);
+&lt;/script&gt;
+
+&lt;p&gt;Code (granted, this one is a bit more complicated):&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;width&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;700&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;height&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;linspace&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;stop&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;num_samples&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;d3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;stop&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;num_samples&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;stop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;n&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;n&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;num_samples&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;stop&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="nx"&gt;start&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;};&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;direction&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;linspace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;500&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nx"&gt;direction&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;x_step&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;width&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;length&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;y_middle&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;height&lt;/span&gt; &lt;span class="o"&gt;/&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;radius&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;fill&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;#F012BE&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;sin_svg&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;d3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#dancing-sin-graph&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;svg&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;width&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;width&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;height&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="nx"&gt;sin_svg&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;selectAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;enter&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;append&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;r&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;x_step&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;})&lt;/span&gt;
+  &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;y_middle&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="p"&gt;});&lt;/span&gt;
+
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;direction&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;direction&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="nx"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;x&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="nx"&gt;height&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mi"&gt;50&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nx"&gt;direction&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nb"&gt;Math&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;sin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+
+  &lt;span class="nx"&gt;d3&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;select&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;#dancing-sin-graph&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;).&lt;/span&gt;&lt;span class="nx"&gt;selectAll&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;circle&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;data&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;transition&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;duration&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1000&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;r&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;fill&lt;/span&gt;&lt;span class="p"&gt;})&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cx&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;x_step&lt;/span&gt; &lt;span class="o"&gt;*&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;})&lt;/span&gt;
+    &lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;attr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cy&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;i&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+      &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;y_middle&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt; &lt;span class="nx"&gt;d&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Make the interval just less than the transition duration so motion never stops&lt;/span&gt;
+&lt;span class="nx"&gt;setInterval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;invert&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;900&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="javascript"></category><category term="programming"></category><category term="data"></category></entry><entry><title>Why I changed my mind about Node.js</title><link href="https://calebmadrigal.com/why-i-changed-my-mind-about-nodejs/" rel="alternate"></link><updated>2014-09-15T22:55:00-05:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2014-09-15:why-i-changed-my-mind-about-nodejs/</id><summary type="html">&lt;h2&gt;Intro&lt;/h2&gt;
+&lt;p&gt;&lt;img src="/images/nodejs-logo.png" style="width:259px; height:141px; float:left; margin-right:15px" /&gt;
+I first heard of &lt;a href="http://nodejs.org/"&gt;Node.js&lt;/a&gt; about 4 years ago. I thought it was a ridiculous idea: using JavaScript as your server-side language! JavaScript always felt to me like an inferior language. Why would you use it unless you absolutely had to!? Now of course, you have to do JavaScript if you are writing code which runs in the browser, but on the server, you can use any language you choose. So why choose JavaScript?&lt;/p&gt;
+&lt;p&gt;I did choose to use JavaScript/Node.js on my current project. I have now been using it for the last several months, and I am quite impressed! Let me tell you what made me change my mind about Node.js.&lt;/p&gt;
+&lt;h2&gt;Adoption by the Enterprise world&lt;/h2&gt;
+&lt;p&gt;First, Node.js has been adopted by multiple top-tier companies, with great success. Here are a few companies who have adopted Node.js: &lt;a href="https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/"&gt;PayPal&lt;/a&gt;, &lt;a href="http://venturebeat.com/2012/01/24/why-walmart-is-using-node-js/"&gt;Walmart&lt;/a&gt;, &lt;a href="http://www.ebaytechblog.com/2013/05/17/how-we-built-ebays-first-node-js-application/#.VBe2hi5dV00"&gt;Ebay&lt;/a&gt;, &lt;a href="http://www.datacenterknowledge.com/archives/2013/12/06/need-speed-groupon-migrated-node-js/"&gt;Groupon&lt;/a&gt;, and &lt;a href="http://venturebeat.com/2011/08/16/linkedin-node/"&gt;LinkedIn&lt;/a&gt;. And these companies are not using Node for menial tasks; they’re using it in heavily-used production applications. For example, PayPal wrote about their experience using Node.js on what they call "one of the most trafficked apps on the website”. Here are some of their observations comparing their Node.js version of the app to their Java version of the app:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Built &lt;strong&gt;almost twice as fast&lt;/strong&gt; with fewer people&lt;/li&gt;
+&lt;li&gt;Written in &lt;strong&gt;33% fewer lines of code&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;Constructed with &lt;strong&gt;40% fewer files&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Double the requests per second vs. the Java application&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;35% decrease in the average response time&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;(Source: &lt;a href="https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/"&gt;https://www.paypal-engineering.com/2013/11/22/node-js-at-paypal/&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;That’s pretty serious! That’s what got me interested.&lt;/p&gt;
+&lt;h2&gt;Package manager - NPM&lt;/h2&gt;
+&lt;p&gt;&lt;img src="/images/npm-logo.png" style="width:300px; height:150px; float:left; margin-right:15px" /&gt;
+So I started looking into Node.js for myself, and found many wonderful things. First, it has a wonderful package management system called &lt;a href="https://www.npmjs.org/"&gt;npm&lt;/a&gt;. With npm, you can install practically any Node.js package/library by running “npm install package-name”. Node.js also has nice conventions for keeping track of dependencies with a package.json file. With this, you can simply clone a Node.js repo, and run “npm install” to install all of the necessary dependencies.&lt;/p&gt;
+&lt;h2&gt;Libraries&lt;/h2&gt;
+&lt;p&gt;These days, having good libraries is crucial to success. And in this regard, Node.js delivers in spades. The Node.js community is incredibly vibrant, and is always turning out new packages. I have found the libraries in Node.js to be so good, that they make JavaScript into a great, productive platform. I’m a long-time Pythonista, and I have a lot of trouble getting excited about other technologies because I just can’t be as productive in them as I can in Python. But I’m excited about Node.js - I feel super productive in it, and I’ve only recently started using it. That’s about the best complement I can give to any language or platform.&lt;/p&gt;
+&lt;h2&gt;The REPL&lt;/h2&gt;
+&lt;p&gt;Another thing I loved about Node.js was the &lt;a href="http://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop"&gt;REPL&lt;/a&gt; (read-evaluate-print loop) - or as it is sometimes called, the Node.js command-line. With this, you can just type “node” in the terminal, and be able to test out Node.js one line at a time. This is something that, coming from a strong Python background, I have come to absolutely love! I can easily write a function, and jump into the REPL, import the code, and test it out. Or I sometimes write the function in the REPL, and once it is working well, copy it to my source code file.&lt;/p&gt;
+&lt;h2&gt;Non-blocking everywhere&lt;/h2&gt;
+&lt;p&gt;Node.js has another big thing going for it: it was built with an emphasis on non-blocking functions (on the &lt;a href="http://en.wikipedia.org/wiki/Event_loop"&gt;Event loop&lt;/a&gt; model), and this emphasis has been adopted by the whole Node.js community. This is why you will see a lot of &lt;a href="http://en.wikipedia.org/wiki/Callback_(computer_programming)"&gt;callbacks&lt;/a&gt; and &lt;a href="https://github.com/kriskowal/q"&gt;promises&lt;/a&gt; in Node.js code. When you call a function in Node.js, if there is any chance it could take a while, that function will not return it’s value directly; instead, it will return immediately, run the long-running operation "in the background", and call the callback function when complete (passing the return value as a parameter to that callback function). This design pattern is what leads to Node.js’s impressive performance record.&lt;/p&gt;
+&lt;h2&gt;One language&lt;/h2&gt;
+&lt;p&gt;Lastly, one of Node.js’s biggest advantages is also what may seem to be a disadvantage: that it is JavaScript. But this is indeed an advantage for a few reasons. The first reason is that everyone knows (or soon will need to know) JavaScript (due to everything moving to the web). So you don’t need to teach anyone a new language to use Node.js. The other reason JavaScript is advantageous is that you can use one language - JavaScript - for everything. JavaScript can obviously run in Browsers, with Node.js, JavaScript can be your server-side code, and with &lt;a href="http://en.wikipedia.org/wiki/Document-oriented_database"&gt;Document databases&lt;/a&gt; like &lt;a href="http://www.mongodb.org/"&gt;MongoDB&lt;/a&gt; and &lt;a href="http://couchdb.apache.org/"&gt;CouchDB&lt;/a&gt; which store JSON objects, JavaScript can be the native format of your data. And having one language for everything can greatly simplify the task of transferring data between your database and UI, and that task often makes up a large portion of the complexity of an application.&lt;/p&gt;
+&lt;h2&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Use Node.js! It's fun, easy to learn, and (I'm betting) will continue to gain prominence in the upcoming years.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;More comments on Hacker News: &lt;a href="https://news.ycombinator.com/item?id=8324890"&gt;https://news.ycombinator.com/item?id=8324890&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</summary><category term="javascript"></category><category term="nodejs"></category><category term="expressjs"></category></entry><entry><title>Sessions in Node.js and Express.js</title><link href="https://calebmadrigal.com/sessions-in-nodejs-expressjs/" rel="alternate"></link><updated>2014-09-15T19:36:00-05:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2014-09-15:sessions-in-nodejs-expressjs/</id><summary type="html">&lt;p&gt;In the process of trying to explain to a friend how sessions work, I decided to write a barebones example to demonstrate how to do sessions in Node.js with Express.js.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Here's a live demo: &lt;a href="http://expressjs-session-example.herokuapp.com/"&gt;http://expressjs-session-example.herokuapp.com/&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;And Here's what it looks like:&lt;/p&gt;
+&lt;p&gt;Before you enter your name:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/session_example_1.png" style="width:190px; height:90px" /&gt;&lt;/p&gt;
+&lt;p&gt;After you enter your name:&lt;/p&gt;
+&lt;p&gt;&lt;img src="/images/session_example_2.png" style="width:98px; height:72px" /&gt;&lt;/p&gt;
+&lt;p&gt;And here is the code:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;express&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;express&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;cookieParser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cookie-parser&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;bodyParser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;body-parser&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;session&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;require&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;cookie-session&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;///////////////////////////////////////////////////////////////////////////////////////// MIDDLEWARE&lt;/span&gt;
+
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;app&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;express&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Needed to handle JSON posts&lt;/span&gt;
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;bodyParser&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;());&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Cookie parsing needed for sessions&lt;/span&gt;
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;cookieParser&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;notsosecretkey&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Session framework&lt;/span&gt;
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;session&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt;&lt;span class="nx"&gt;secret&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;notsosecretkey123&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;}));&lt;/span&gt;
+
+&lt;span class="c1"&gt;// Consider all URLs under /public/ as static files, and return them raw.&lt;/span&gt;
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;use&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;express&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="kr"&gt;static&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;__dirname&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;/public&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;));&lt;/span&gt;
+
+&lt;span class="c1"&gt;/////////////////////////////////////////////////////////////////////////////////////////// HANDLERS&lt;/span&gt;
+
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;getName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;session&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;session&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;setName&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="k"&gt;if&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;!&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;hasOwnProperty&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;statusCode&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;400&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;error&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Invalid message&amp;#39;&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+  &lt;span class="k"&gt;else&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+    &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;session&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;({&lt;/span&gt; &lt;span class="nx"&gt;name&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt; &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;body&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;name&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+  &lt;span class="p"&gt;}&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="nx"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt;
+  &lt;span class="nx"&gt;req&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;session&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="kc"&gt;null&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+  &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nx"&gt;res&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;json&lt;/span&gt;&lt;span class="p"&gt;({});&lt;/span&gt;
+&lt;span class="p"&gt;}&lt;/span&gt;
+
+&lt;span class="c1"&gt;///////////////////////////////////////////////////////////////////////////////////////////// ROUTES&lt;/span&gt;
+
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;getName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;post&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;setName&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;get&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;/logout&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nx"&gt;logout&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt;
+
+&lt;span class="c1"&gt;////////////////////////////////////////////////////////////////////////////////////// SERVER LISTEN&lt;/span&gt;
+&lt;span class="kd"&gt;var&lt;/span&gt; &lt;span class="nx"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nx"&gt;process&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;env&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;PORT&lt;/span&gt; &lt;span class="o"&gt;||&lt;/span&gt; &lt;span class="mi"&gt;3000&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="nx"&gt;app&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;listen&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nx"&gt;port&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="kd"&gt;function&lt;/span&gt; &lt;span class="p"&gt;()&lt;/span&gt; &lt;span class="p"&gt;{&lt;/span&gt; &lt;span class="nx"&gt;console&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;log&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;Listening on port &amp;quot;&lt;/span&gt; &lt;span class="o"&gt;+&lt;/span&gt; &lt;span class="nx"&gt;port&lt;/span&gt;&lt;span class="p"&gt;);&lt;/span&gt; &lt;span class="p"&gt;});&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Github repo: &lt;a href="https://github.com/calebmadrigal/expressjs-session-example"&gt;https://github.com/calebmadrigal/expressjs-session-example&lt;/a&gt;&lt;/p&gt;</summary><category term="javascript"></category><category term="nodejs"></category><category term="expressjs"></category></entry><entry><title>NodeJS on Heroku</title><link href="https://calebmadrigal.com/nodejs-on-heroku/" rel="alternate"></link><updated>2014-02-08T15:45:00-06:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2014-02-08:nodejs-on-heroku/</id><summary type="html">&lt;p&gt;I've recently tried both &lt;a href="http://heroku.com"&gt;Heroku&lt;/a&gt; and &lt;a href="http://nodejs.org/"&gt;Node.js&lt;/a&gt; for the first time.  Both are very simple, and work very nicely together.  This is a quick guide to deploying a Node.js app to Heroku.  To make it simple, I'll walk through deploying a Node.js &lt;a href="https://github.com/calebmadrigal/expressjs-messageboard"&gt;sample project I created&lt;/a&gt;.  It is a very simple message board.&lt;/p&gt;
+&lt;p&gt;Here are the steps to getting this simple app up and running on Heroku...&lt;/p&gt;
+&lt;h4&gt;Get Heroku account&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Go to &lt;a href="http://heroku.com"&gt;Heroku&lt;/a&gt;, and click Sign Up&lt;/li&gt;
+&lt;li&gt;Download and install the Heroku Toolbeld for your operating system (which gives you the &lt;code&gt;heroku&lt;/code&gt; command in your terminal)&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://toolbelt.heroku.com/"&gt;Installation details&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Open your terminal and run &lt;code&gt;heroku login&lt;/code&gt;, and enter your heroku credentials and the prompts&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Deploy your app to heroku&lt;/h4&gt;
+&lt;p&gt;In your terminal, do the following:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;git clone https://github.com/calebmadrigal/expressjs-messageboard&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Clone the sample message board app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd expressjs-messageboard&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;It is important to be in the top-level directory of the repository&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;heroku apps:create expressjs-messageboard&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Adds a git remote for heroku&lt;/li&gt;
+&lt;li&gt;At this point, you should be able to see the app listed in your Heroku dashboard&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;git push heroku master&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Pushes your repo out to heroku, which causes heroku to deploy your app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;heroku ps:scale web=1&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Ensures that at least 1 "dyno" is allocated to the app&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4&gt;Bask in the glory&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;heroku open&lt;/code&gt;&lt;ul&gt;
+&lt;li&gt;Attempts to open your app in a browser window&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="javascript"></category></entry><entry><title>JSONP for cross-origin AJAX</title><link href="https://calebmadrigal.com/jsonp-for-cross-origin-ajax/" rel="alternate"></link><updated>2012-03-05T18:27:30-06:00</updated><author><name>Caleb Madrigal</name></author><id>tag:calebmadrigal.com,2012-03-05:jsonp-for-cross-origin-ajax/</id><summary type="html">&lt;p&gt;I was recently wanting to enable a webpage to utilize some server-side functionality which was on a different server than the one serving the original page.  Traditionally, this has been problematic due to browsers' &lt;a href="http://en.wikipedia.org/wiki/Same_origin_policy"&gt;Same origin policy&lt;/a&gt;.  JSONP is a solution to this problem.  Here is how to do it with jQuery...&lt;/p&gt;
+&lt;p&gt;This webpage can be saved locally to any machine, opened in a browser, and can then load data from my web server:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nt"&gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;src=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;script&lt;/span&gt; &lt;span class="na"&gt;type=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;text/javascript&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&lt;/span&gt;
+$(document).ready(function(){
+    $(&amp;quot;button&amp;quot;).click(function(){
+        $.ajax({
+            url:&amp;quot;http://test.calebmadrigal.com/javascript/jsonp_test.json&amp;quot;,
+            dataType:&amp;#39;jsonp&amp;#39;,
+            jsonpCallback: &amp;quot;jsonp_load&amp;quot;,
+            success:function(result){
+                $(&amp;quot;#outputdiv&amp;quot;).html(result);
+            }
+        });
+    });
+});
+&lt;span class="nt"&gt;&amp;lt;/script&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;button&amp;gt;&lt;/span&gt;Load data&lt;span class="nt"&gt;&amp;lt;/button&amp;gt;&lt;/span&gt;
+    &lt;span class="nt"&gt;&amp;lt;div&lt;/span&gt; &lt;span class="na"&gt;id=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;outputdiv&amp;quot;&lt;/span&gt;&lt;span class="nt"&gt;&amp;gt;&amp;lt;/div&amp;gt;&lt;/span&gt;
+&lt;span class="nt"&gt;&amp;lt;/body&amp;gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here is what the server-side looks like:&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;jsonp_load(&amp;quot;&lt;span class="nt"&gt;&amp;lt;h4&amp;gt;&lt;/span&gt;This text was loaded from http://test.calebmadrigal.com/javascript/jsonp_test.json&lt;span class="nt"&gt;&amp;lt;/h4&amp;gt;&lt;/span&gt;&amp;quot;);
+&lt;/pre&gt;&lt;/div&gt;</summary><category term="javascript"></category><category term="jquery"></category></entry></feed>
