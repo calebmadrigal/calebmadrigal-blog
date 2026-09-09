@@ -1,6 +1,8 @@
 calebmadrigal-blog
 ==================
 
+2026-09-08: Migrated from DigitalOcean Droplet (VPS) to Cloudflare Pages
+
 calebmadrigal.com - my Pelican-powered blog.
 
 Running on Ubuntu 14.04 on DigitalOcean.
